@@ -1,4 +1,8 @@
 library(shiny)
+library(tidyverse)
+library(nflfastR)
+
+df <- read.csv("player_data.csv")
 
 # Define the user interface
 ui <- navbarPage("Navbar",
