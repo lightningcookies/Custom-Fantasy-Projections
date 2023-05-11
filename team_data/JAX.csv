@@ -1,0 +1,16 @@
+"","player_name","position","attempts","completions","comp_pct","pass_yd","pass_td","int","rush_yd","rush_td","fumbles_lost","two_point","fantasy_points","weeks_played","calc_fantasy_unfinished","carries","trgt","receptions","receiving_yards","trgt_share","rec_yds","rec_tds","rush_yards","fantasy_ppr","rec_yards","rec_td"
+"1","T.Lawrence","QB",584,387,"66.27%",4113,25,8,291,5,9,3,295.62,17,303.62,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"2","C.Beathard","QB",11,7,"63.64%",35,0,1,-4,0,0,0,-1,4,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"3","T.Etienne","RB",NA,NA,NA,NA,NA,NA,1125,5,4,NA,168.1,17,NA,220,45,35,316,0.0756302521008403,NA,NA,NA,NA,NA,NA
+"4","J.Robinson","RB",NA,NA,NA,NA,NA,NA,340,3,0,NA,62.6,7,NA,81,11,9,46,0.0184873949579832,NA,NA,NA,NA,NA,NA
+"5","J.Hasty","RB",NA,NA,NA,NA,NA,NA,194,2,0,NA,50,14,NA,46,26,20,126,0.0436974789915966,NA,NA,NA,NA,NA,NA
+"6","S.Conner","RB",NA,NA,NA,NA,NA,NA,42,1,0,NA,10.2,5,NA,12,0,0,0,0,NA,NA,NA,NA,NA,NA
+"7","E.Engram","TE",NA,NA,NA,NA,NA,NA,NA,0,0,NA,NA,17,NA,2,98,73,NA,0.164705882352941,766,4,13,176.9,NA,NA
+"8","D.Arnold","TE",NA,NA,NA,NA,NA,NA,NA,0,0,NA,NA,10,NA,0,13,9,NA,0.0218487394957983,135,0,0,22.5,NA,NA
+"9","C.Manhertz","TE",NA,NA,NA,NA,NA,NA,NA,0,0,NA,NA,6,NA,0,8,6,NA,0.0134453781512605,42,0,0,10.2,NA,NA
+"10","L.Farrell","TE",NA,NA,NA,NA,NA,NA,NA,0,0,NA,NA,4,NA,0,4,4,NA,0.00672268907563025,40,0,0,8,NA,NA
+"11","C.Kirk","WR",NA,NA,NA,NA,NA,NA,NA,0,0,NA,NA,17,NA,5,133,84,NA,0.223529411764706,NA,NA,11,243.9,1108,8
+"12","Z.Jones","WR",NA,NA,NA,NA,NA,NA,NA,0,0,NA,NA,16,NA,4,121,82,NA,0.203361344537815,NA,NA,18,198.1,823,5
+"13","M.Jones","WR",NA,NA,NA,NA,NA,NA,NA,0,0,NA,NA,16,NA,0,81,46,NA,0.136134453781513,NA,NA,0,116.9,529,3
+"14","J.Agnew","WR",NA,NA,NA,NA,NA,NA,NA,0,0,NA,NA,14,NA,12,30,23,NA,0.0504201680672269,NA,NA,86,70.3,187,3
+"15","T.Jones","WR",NA,NA,NA,NA,NA,NA,NA,0,0,NA,NA,4,NA,0,4,3,NA,0.00672268907563025,NA,NA,0,6,30,0

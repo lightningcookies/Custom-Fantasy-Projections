@@ -1,0 +1,16 @@
+"","player_name","position","attempts","completions","comp_pct","pass_yd","pass_td","int","rush_yd","rush_td","fumbles_lost","two_point","fantasy_points","weeks_played","calc_fantasy_unfinished","carries","trgt","receptions","receiving_yards","trgt_share","rec_yds","rec_tds","rush_yards","fantasy_ppr","rec_yards","rec_td"
+"1","K.Cousins","QB",643,424,"65.94%",4547,29,14,97,2,3,3,291.58,17,305.58,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"2","N.Mullens","QB",25,21,"84.00%",224,1,1,8,0,0,0,11.76,4,12.76,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"3","D.Cook","RB",NA,NA,NA,NA,NA,NA,1173,8,3,NA,198.8,17,NA,264,56,39,295,0.0838323353293413,NA,NA,NA,NA,NA,NA
+"4","A.Mattison","RB",NA,NA,NA,NA,NA,NA,283,5,0,NA,73.4,17,NA,74,18,15,91,0.0269461077844311,NA,NA,NA,NA,NA,NA
+"5","K.Nwangwu","RB",NA,NA,NA,NA,NA,NA,14,0,0,NA,9.5,3,NA,9,2,2,21,0.0029940119760479,NA,NA,NA,NA,NA,NA
+"6","T.Chandler","RB",NA,NA,NA,NA,NA,NA,20,0,0,NA,2,1,NA,6,0,0,0,0,NA,NA,NA,NA,NA,NA
+"7","T.Hockenson","TE",NA,NA,NA,NA,NA,NA,NA,0,1,NA,NA,10,NA,0,86,60,NA,0.12874251497006,519,3,0,129.9,NA,NA
+"8","I.Smith","TE",NA,NA,NA,NA,NA,NA,NA,0,0,NA,NA,8,NA,0,36,25,NA,0.0538922155688623,182,2,0,55.2,NA,NA
+"9","J.Mundt","TE",NA,NA,NA,NA,NA,NA,NA,0,0,NA,NA,13,NA,0,21,19,NA,0.031437125748503,140,1,0,39,NA,NA
+"10","B.Ellefson","TE",NA,NA,NA,NA,NA,NA,NA,0,0,NA,NA,2,NA,0,3,3,NA,0.00449101796407186,26,0,0,5.6,NA,NA
+"11","J.Jefferson","WR",NA,NA,NA,NA,NA,NA,NA,1,0,NA,NA,17,NA,4,184,128,NA,0.275449101796407,NA,NA,24,368.66,1809,8
+"12","A.Thielen","WR",NA,NA,NA,NA,NA,NA,NA,0,0,NA,NA,17,NA,1,107,70,NA,0.160179640718563,NA,NA,4,180,716,6
+"13","K.Osborn","WR",NA,NA,NA,NA,NA,NA,NA,0,0,NA,NA,17,NA,3,90,60,NA,0.134730538922156,NA,NA,6,155.6,650,5
+"14","J.Nailor","WR",NA,NA,NA,NA,NA,NA,NA,0,0,NA,NA,5,NA,0,13,9,NA,0.0194610778443114,NA,NA,0,32.9,179,1
+"15","J.Reagor","WR",NA,NA,NA,NA,NA,NA,NA,0,0,NA,NA,10,NA,4,13,8,NA,0.0194610778443114,NA,NA,25,26.9,104,1
