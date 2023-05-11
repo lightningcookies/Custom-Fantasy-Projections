@@ -18,11 +18,24 @@ int_point <- (-1)
 tp_conv <- 2
 fum_lost <- (-2)
 
+# filter df for faster performance
+df_filtered <- df %>%
+  filter(season == 2022,
+         season_type == "REG") %>%
+  select(position, player_name, recent_team, targets, receptions,
+         receiving_yards, receiving_tds, rushing_yards, rushing_tds,
+         rushing_fumbles_lost, receiving_fumbles_lost,
+         passing_yards, passing_tds, attempts, completions,
+         interceptions, fantasy_points, fantasy_points_ppr, sack_fumbles_lost,
+         passing_2pt_conversions, rushing_2pt_conversions, carries)
+
+
+
+
+# main for loop
 for(team in nfl_teams){
-  QB_df <- df %>%
+  QB_df <- df_filtered %>%
     filter(position == "QB",
-           season == 2022,
-           season_type == "REG",
            recent_team == team)%>%
     group_by(player_name)%>%
     summarise(position = unique(position),
@@ -48,10 +61,8 @@ for(team in nfl_teams){
              (two_point * tp_conv)+
              (fumbles_lost * fum_lost))
 
-  RB_df <- df %>%
+  RB_df <- df_filtered %>%
     filter(position == "RB",
-           season == 2022,
-           season_type == "REG",
            recent_team == team)%>%
     group_by(player_name)%>%
     summarise(position = unique(position),
@@ -68,10 +79,8 @@ for(team in nfl_teams){
     #mutate(tgt_share = percent(as.numeric(tgt_share), accuracy = 0.01))%>%
     arrange(desc(fantasy_points))
   
-  WR_df <- df %>%
+  WR_df <- df_filtered %>%
     filter(position == "WR",
-           season == 2022,
-           season_type == "REG",
            recent_team == team)%>%
     group_by(player_name)%>%
     summarise(position = unique(position),
@@ -89,10 +98,8 @@ for(team in nfl_teams){
     #mutate(tgt_share = percent(as.numeric(tgt_share), accuracy = 0.01))%>%
     arrange(desc(fantasy_ppr))
   
-  TE_df <- df %>%
+  TE_df <- df_filtered %>%
     filter(position == "TE",
-           season == 2022,
-           season_type == "REG",
            recent_team == team)%>%
     group_by(player_name)%>%
     summarise(position = unique(position),
