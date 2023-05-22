@@ -1,0 +1,288 @@
+tabItem(tabName = "Ari",
+	h2("Arizona Cardinals"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Atl",
+	h2("Atlanta Falcons"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Bal",
+	h2("Baltimore Ravens"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Buf",
+	h2("Buffalo Bills"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Car",
+	h2("Carolina Panthers"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Chi",
+	h2("Chicago Bears"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Cin",
+	h2("Cincinnati Bengals"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Cle",
+	h2("Cleveland Browns"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Dal",
+	h2("Dallas Cowboys"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Den",
+	h2("Denver Broncos"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Det",
+	h2("Detroit Lions"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Gre",
+	h2("Green Bay Packers"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Hou",
+	h2("Houston Texans"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Ind",
+	h2("Indianapolis Colts"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Jac",
+	h2("Jacksonville Jaguars"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Kan",
+	h2("Kansas City Chiefs"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Las",
+	h2("Las Vegas Raiders"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Los",
+	h2("Los Angeles Chargers"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Los",
+	h2("Los Angeles Rams"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Mia",
+	h2("Miami Dolphins"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Min",
+	h2("Minnesota Vikings"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "New",
+	h2("New England Patriots"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "New",
+	h2("New Orleans Saints"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "New",
+	h2("New York Giants"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "New",
+	h2("New York Jets"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Phi",
+	h2("Philadelphia Eagles"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Pit",
+	h2("Pittsburgh Steelers"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "San",
+	h2("San Francisco 49ers"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Sea",
+	h2("Seattle Seahawks"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Tam",
+	h2("Tampa Bay Buccaneers"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Ten",
+	h2("Tennessee Titans"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
+tabItem(tabName = "Was",
+	h2("Washington Football Team"),
+	fluidRow(
+		box(title = "Quarterbacks"),
+		box(title = "Running Backs"),
+		box(title = "Wide Receivers"),
+		box(title = "Tight Ends")
+	)
+)
