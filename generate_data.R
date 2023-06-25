@@ -41,117 +41,129 @@ for(team in nfl_teams){
     filter(position == "QB",
            recent_team == team)%>%
     group_by(player_name)%>%
-    summarise(position = unique(position),
-              attempts = sum(attempts),
-              completions = sum(completions),
-              comp_pct = completions/attempts,
-              pass_yd = sum(passing_yards),
-              pass_td = sum(passing_tds),
+    summarise(pos = unique(position),
+              g = n(),
+              p_att = sum(attempts),
+              cmp = sum(completions),
+              p_yd = sum(passing_yards),
+              p_td = sum(passing_tds),
               int = sum(interceptions),
-              rush_yd = sum(rushing_yards),
-              rush_td = sum(rushing_tds),
-              fumbles_lost = sum(rushing_fumbles_lost + sack_fumbles_lost),
-              two_point = sum(passing_2pt_conversions + rushing_2pt_conversions),
-              fantasy_ppr = sum(fantasy_points_ppr),
-              weeks_played = n())%>%
-    mutate(comp_pct = percent(comp_pct, accuracy = 0.01)) %>%
-    arrange(desc(fantasy_ppr))%>%
-    mutate(calc_fantasy_unfinished = (rush_td * 6) +
-             (.1 * rush_yd) + 
-             (pass_td * ptd) +
-             (pass_yd * pass_yd_pt) +
-             (int * int_point)+
-             (two_point * tp_conv)+
-             (fumbles_lost * fum_lost))
+              car = sum(carries),
+              r_yd = sum(rushing_yards),
+              r_td = sum(rushing_tds),
+              fmb = sum(rushing_fumbles_lost + sack_fumbles_lost),
+              tp_c = sum(passing_2pt_conversions + rushing_2pt_conversions),
+              f_ppr = sum(fantasy_points_ppr))%>%
+    mutate(cmp_pct = cmp/p_att,
+           int_pct = int/p_att,
+           td_pct = p_td/p_att,
+           f_custom = (r_td * 6) +
+             (.1 * r_yd) + 
+             (ptd * p_td) +
+             (pass_yd_pt * p_yd) +
+             (int_point * int)+
+             (tp_conv * tp_c)+
+             (fum_lost * fmb)) %>%
+    arrange(desc(f_ppr))
   
 # RB
   RB_df <- df_filtered %>%
     filter(position == "RB",
            recent_team == team)%>%
     group_by(player_name)%>%
-    summarise(position = unique(position),
-              carries = sum(carries),
-              rush_yd = sum(rushing_yards),
-              rush_td = sum(rushing_tds),
-              trgt = sum(targets),
-              receptions = sum(receptions),
+    summarise(pos = unique(position),
+              g = n(),
+              car = sum(carries),
+              r_yd = sum(rushing_yards),
+              r_td = sum(rushing_tds),
+              tgt = sum(targets),
+              rec = sum(receptions),
               rec_yd = sum(receiving_yards),
               rec_td = sum(receiving_tds),
-              two_point = sum(receiving_2pt_conversions + rushing_2pt_conversions),
-              fumbles_lost = sum(rushing_fumbles_lost + receiving_fumbles_lost),
-              fantasy_ppr = sum(fantasy_points_ppr),
-              weeks_played = n())%>%
-    mutate(trgt_share = trgt/sum(QB_df$attempts))%>%
+              tp_c = sum(receiving_2pt_conversions + rushing_2pt_conversions),
+              fmb = sum(rushing_fumbles_lost + receiving_fumbles_lost),
+              f_ppr = sum(fantasy_points_ppr))%>%
+    mutate(tgt_p = tgt/sum(QB_df$p_att))%>%
     #mutate(tgt_share = percent(as.numeric(tgt_share), accuracy = 0.01))%>%
-    arrange(desc(fantasy_ppr))%>%
-    mutate(calc_fantasy_unfinished = (rush_td * 6) +
-             (.1 * rush_yd) + 
-             (pr * receptions) +
+    arrange(desc(f_ppr))%>%
+    mutate(f_custom = (r_td * 6) +
+             (.1 * r_yd) + 
+             (pr * rec) +
              (.1 * rec_yd) +
              (6 * rec_td) +
-             (tp_conv * two_point) +
-             (fum_lost * fumbles_lost))
+             (tp_conv * tp_c) +
+             (fum_lost * fmb))
              
   # WR
   WR_df <- df_filtered %>%
     filter(position == "WR",
            recent_team == team)%>%
     group_by(player_name)%>%
-    summarise(position = unique(position),
-              weeks_played = n(),
-              trgt = sum(targets),
-              receptions = sum(receptions),
+    summarise(pos = unique(position),
+              g = n(),
+              tgt = sum(targets),
+              rec = sum(receptions),
               rec_yd = sum(receiving_yards),
               rec_td = sum(receiving_tds),
-              carries = sum(carries),
-              rush_yd = sum(rushing_yards),
-              rush_td = sum(rushing_tds),
-              two_point = sum(receiving_2pt_conversions + rushing_2pt_conversions),
-              fumbles_lost = sum(rushing_fumbles_lost + receiving_fumbles_lost),
-              fantasy_ppr = sum(fantasy_points_ppr))%>%
-    mutate(trgt_share = trgt/sum(QB_df$attempts))%>%
+              car = sum(carries),
+              r_yd = sum(rushing_yards),
+              r_td = sum(rushing_tds),
+              tp_c = sum(receiving_2pt_conversions + rushing_2pt_conversions),
+              fmb = sum(rushing_fumbles_lost + receiving_fumbles_lost),
+              f_ppr = sum(fantasy_points_ppr))%>%
+    mutate(tgt_p = tgt/sum(QB_df$p_att))%>%
     #mutate(tgt_share = percent(as.numeric(tgt_share), accuracy = 0.01))%>%
-    arrange(desc(fantasy_ppr))%>%
-    mutate(calc_fantasy_unfinished = (rush_td * 6) +
-             (.1 * rush_yd) + 
-             (pr * receptions) +
+    arrange(desc(f_ppr))%>%
+    mutate(f_custom = (6 * r_td) +
+             (.1 * r_yd) + 
+             (pr * rec) +
              (.1 * rec_yd) +
              (6 * rec_td) +
-             (tp_conv * two_point) +
-             (fum_lost * fumbles_lost))
+             (tp_conv * tp_c) +
+             (fum_lost * fmb))
     
   #TE
   TE_df <- df_filtered %>%
     filter(position == "TE",
            recent_team == team)%>%
     group_by(player_name)%>%
-    summarise(position = unique(position),
-              weeks_played = n(),
-              trgt = sum(targets),
-              receptions = sum(receptions),
+    summarise(pos = unique(position),
+              g = n(),
+              tgt = sum(targets),
+              rec = sum(receptions),
               rec_yd = sum(receiving_yards),
               rec_td = sum(receiving_tds),
-              carries = sum(carries),
-              rush_yd = sum(rushing_yards),
-              rush_td = sum(rushing_tds),
-              two_point = sum(receiving_2pt_conversions + rushing_2pt_conversions),
-              fumbles_lost = sum(rushing_fumbles_lost + receiving_fumbles_lost),
-              fantasy_ppr = sum(fantasy_points_ppr))%>%
-    mutate(trgt_share = trgt/sum(QB_df$attempts))%>%
+              car = sum(carries),
+              r_yd = sum(rushing_yards),
+              r_td = sum(rushing_tds),
+              tp_c = sum(receiving_2pt_conversions + rushing_2pt_conversions),
+              fmb = sum(rushing_fumbles_lost + receiving_fumbles_lost),
+              f_ppr = sum(fantasy_points_ppr))%>%
+    mutate(tgt_p = tgt/sum(QB_df$p_att))%>%
     #mutate(tgt_share = percent(as.numeric(tgt_share), accuracy = 0.01))%>%
-    arrange(desc(fantasy_ppr))%>%
-    mutate(calc_fantasy_unfinished = (rush_td * 6) +
-             (.1 * rush_yd) + 
-             (pr * receptions) +
+    arrange(desc(f_ppr))%>%
+    mutate(f_custom = (6 * r_td) +
+             (.1 * r_yd) + 
+             (pr * rec) +
              (.1 * rec_yd) +
              (6 * rec_td) +
-             (tp_conv * two_point) +
-             (fum_lost * fumbles_lost))
+             (tp_conv * tp_c) +
+             (fum_lost * fmb))
     
-
+  # joins
   df_join1 <- full_join(QB_df,RB_df)
   df_join2 <- full_join(df_join1, TE_df)
   df_join3 <- full_join(df_join2, WR_df)
+  
+  # Replace NA
+  df_join3 <- df_join3 %>% replace(is.na(.), 0)
+  
+  df_s <- tibble(points = 34,
+    pass_att = sum(df_join3$p_att),
+    cmp = sum(df_join3$cmp)
+                 )%>%
+    view()
+  
   filename <- paste0("team_data/", team, ".csv")
   write.csv(df_join3, filename)
 }
