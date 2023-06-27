@@ -56,37 +56,40 @@ for (team in nfl_teams) {
       rec_td = sum(receiving_tds),
       fmb = sum(rushing_fumbles_lost + sack_fumbles_lost),
       tp_c = sum(passing_2pt_conversions + rushing_2pt_conversions),
-      f_ppr = sum(fantasy_points_ppr))
+      f_ppr = sum(fantasy_points_ppr))%>%
+    filter(pos %in% c("QB","RB","WR","TE","FB"))%>%
+    mutate(tgt_share = tgt/sum(tgt),
+           ypc = r_yd/car,
+           ypr = rec_yd/rec,
+           cmp_pct = cmp/p_att,
+           td_rate = p_td/p_att)%>%
+    mutate(
+       f_custom = case_when(
+         pos == "QB" ~ (r_td * 6) + (.1 * r_yd) + (ptd * p_td)
+         + (pass_yd_pt * p_yd) + (int_point * int) + (tp_conv * tp_c) + (fum_lost * fmb),
+         pos %in% c("RB","WR","TE","FB") ~ (6 * r_td) + (.1 * r_yd) + (pr * rec)
+         + (.1 * rec_yd) + (6 * rec_td) + (tp_conv * tp_c) + (fum_lost * fmb)))
+  
     
-    # mutate(
-    #   f_custom = case_when(
-    #     pos == "QB" ~ (r_td * 6) + (.1 * r_yd) + (ptd * p_td) + (pass_yd_pt * p_yd) + (int_point * int) + (tp_conv * tp_c) + (fum_lost * fmb),
-    #     pos %in% c("RB", "WR", "TE") ~ (6 * r_td) + (.1 * r_yd) + (pr * rec) + (.1 * rec_yd) + (6 * rec_td) + (tp_conv * tp_c) + (fum_lost * fmb)
-    #   )
-    #)
   
   # Append the team's data to the combined data frame
   combined_df <- bind_rows(combined_df, team_df)
 }
-
-df_2 <- combined_df %>%
-  filter(pos %in% c("QB","RB","WR","TE","FB"),f_ppr > 5)%>%
-  select(!position)%>%
+combined_df <- combined_df %>%
+  select(-position)%>%
   view()
 
+# Saving the dataframe 
 
-df_3 <- df_2 %>%
-  filter(recent_team == "ARI")%>%
-  mutate(tgt_share = tgt/sum(tgt),
-         ypc = r_yd/car,
-         ypr = rec_yd/rec,
-         cmp_pct = cmp/p_att,
-         td_rate = p_td/p_att)%>%
-  view()
+write.csv(combined_df,"players_2022.csv")
 
+
+#team stats csv
+
+combined_df2 <- tibble()
 for(team in nfl_teams){
-  df <- read.csv(paste0("team_data/",team,".csv"))
-  
+  df <- read.csv("players_2022.csv")%>%
+    filter(recent_team == team)
   
   off_yd <- sum(df$p_yd) + sum(df$r_yd)
   p_yd <-  sum(df$p_yd)
@@ -99,5 +102,9 @@ for(team in nfl_teams){
   p_td <- sum(df$p_td)
   int <- sum(df$int)
   fmb <- sum(df$fmb)
-  df2 <- tibble(off_yd,p_yd,car,r_yd,r_td,p_ff,p_att,cmp_pct,p_td,int,fmb)
+  df2 <- tibble(team,off_yd,p_yd,car,r_yd,r_td,p_ff,p_att,cmp_pct,p_td,int,fmb)
+  
+  combined_df2 <- bind_rows(combined_df2,df2)
 }
+
+write.csv(combined_df2,"team_stats_2022.csv")
