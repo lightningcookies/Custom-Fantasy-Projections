@@ -1,3 +1,5 @@
+# Creates strings for tab items. Legacy
+
 library(purrr)
 
 # Define the list of team names

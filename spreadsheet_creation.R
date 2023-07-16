@@ -16,38 +16,34 @@ wb <- createWorkbook()
 for(team_ in nfl_teams){
   # 2022 results insertion
   team_df <- df %>% 
-    filter(recent_team == team_)
+    filter(recent_team == team_)%>%
+    select(-X)
     
   addWorksheet(wb, sheetName = team_)
   writeDataTable(wb, sheet = team_, x = team_df, startRow = 1,startCol = 1)
-  
-  # 2023-24 rosters insertion and formatting?
-  team_roster <- roster %>%
-    filter(team == team_)
-  
-  writeDataTable(wb, sheet = team_, x = team_roster,startRow = 35,startCol = 1)
-  
   # 2022-23 season at a glance
   at_glance <- glance %>%
-    filter(team == team_)
+    filter(team == team_)%>%
+    select(-X)
   
   writeDataTable(wb, sheet = team_, x = at_glance, startRow = 30, startCol = 1)
+  #template for 2023-24 at a glance
+  glance_23 <- data.frame(
+    team = character(),off_yd = numeric(),p_yd = numeric(),car = numeric(),
+    r_yd = numeric(),r_td = numeric(),p_ff = numeric(),p_att = numeric(),
+    cmp_pct = numeric(),p_td = numeric(),int = numeric(),fmb = numeric())
+  
+  writeDataTable(wb, sheet = team_, x = glance_23, startRow = 32, startCol = 1)
+  # 2023-24 rosters insertion and formatting?
+  team_roster <- roster %>%
+    filter(team == team_)%>%
+    add_column(g = 0, p_att = 0, cmp = 0, p_yd = 0, p_td = 0, int = 0,
+               car = 0, r_yd = 0, r_td = 0, tgt = 0, rec = 0, rec_yd = 0,
+               rec_td = 0, fmb = 0, tp_c = 0, f_ppr = 0, tgt_share = 0,
+               ypc = 0, ypr = 0, cmp_pct = 0, td_rate = 0, f_custom = 0)%>%
+    select(-X)
+  writeDataTable(wb, sheet = team_, x = team_roster,startRow = 35,startCol = 1)
 }
+
+# Saving the workbook to test_xlsx.xlsx
 saveWorkbook(wb, "test_xlsx.xlsx",overwrite = T)
-
-
-view()
-
-# Notes
-
-# *Need to add a second table where I'll eventually fill in my projections. It would be nice if this was automated with the rosters. 
-# *Then I'll create a "master" page at the beginning of the sheet that takes all my projections and aggregates them into a top 200
-# *Then I can fish all the stats off of that. 
-# *Format the tables so that each different position is different color for ease.
-# Example
-
-# Write the first table to range A1:Z30
-#writeDataTable(wb, sheet = "Sheet1", x = df1, tableStyle = "TableStyleMedium9", startRow = 1, startCol = 1, withHeaders = TRUE)
-
-# Write the second table to range A40:Z70
-#writeDataTable(wb, sheet = "Sheet1", x = df2, tableStyle = "TableStyleMedium9", startRow = 40, startCol = 1, withHeaders = TRUE)

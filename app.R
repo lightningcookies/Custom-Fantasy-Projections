@@ -78,7 +78,6 @@ ui <- dashboardPage(
   body
 )
 
-
 server <- function(input, output) { 
 
 }
@@ -86,12 +85,5 @@ server <- function(input, output) {
 shinyApp(ui, server)
 
 
-
-
 #ideas section
 #file upload and download for changes in rankings with fileInput("upload", NULL)
-
-
-
-
-
