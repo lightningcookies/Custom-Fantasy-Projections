@@ -1,22 +1,29 @@
 library(tidyverse)
 library(rvest)
 library(openxlsx)
+library(nflfastR)
 
-# rosters
-nfl_teams <- c("ARI", "ATL", "BAL", "BUF", "CAR", "CHI", "CIN", "CLE",
-               "DAL", "DEN", "DET", "GB", "HOU", "IND", "JAX", "KC",
-               "LAC", "LA", "LV", "MIA", "MIN", "NE", "NO", "NYG",
-               "NYJ", "PHI", "PIT", "SEA", "SF", "TB", "TEN", "WAS")
-source("rosters.R")
+# 1. Generate rosters
+# source("rosters.R")
 
-#Notes
-#missing file that creates 2023_rosters.csv
+# 2. Generate player stats
+stats <- load_player_stats(seasons = 2022)
+df <- write.csv(stats, file = "player_data.csv")
 
-# re-look at the OG dataset, it looks like it might include things like target share
+# 3. Generate Data
+source("generate_data.R")
 
-# change names of dataframes to avoid conflicts. 
+# 4. Generate Spreadsheet
+source("spreadsheet_creation.R")
 
-# need to finish off the excel sheet on PC. Need to use power query. 
+
+
+# Notes for future
+# change names of dataframes to avoid conflicts? 
+
+# Make it year-proof by changing global variable names?
 
 # could write script for when you're done with your projections, you can export your
-#top 200 a sa csv or something like that. 
+# top 200 to csv or something like that.
+
+# integrate formats with underdog or sleeper for comparison?

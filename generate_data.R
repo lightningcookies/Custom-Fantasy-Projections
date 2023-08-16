@@ -1,6 +1,6 @@
 library(tidyverse)
 library(scales)
-
+message("Running generate_data.R")
 # Read player data in
 df <- read.csv("player_data.csv")
 
@@ -21,7 +21,7 @@ fum_lost <- (-2)
 df_filtered <- df %>%
   filter(season == 2022,
          season_type == "REG") %>%
-  select(position, player_name, recent_team, targets, receptions,
+  select(position, player_name, recent_team, targets,target_share, receptions,
          receiving_yards, receiving_tds, rushing_yards, rushing_tds,
          rushing_fumbles_lost, receiving_fumbles_lost,
          passing_yards, passing_tds, attempts, completions,
@@ -60,27 +60,26 @@ for (team in nfl_teams) {
            ypc = r_yd/car,
            ypr = rec_yd/rec,
            cmp_pct = cmp/p_att,
-           td_rate = p_td/p_att)%>%
-    mutate(
-       f_custom = case_when(
-         pos == "QB" ~ (r_td * 6) + (.1 * r_yd) + (ptd * p_td)
-         + (pass_yd_pt * p_yd) + (int_point * int) + (tp_conv * tp_c) + (fum_lost * fmb),
-         pos %in% c("RB","WR","TE","FB") ~ (6 * r_td) + (.1 * r_yd) + (pr * rec)
-         + (.1 * rec_yd) + (6 * rec_td) + (tp_conv * tp_c) + (fum_lost * fmb)))
+           td_rate = p_td/p_att)
+    #mutate(
+     #  f_custom = case_when(
+     #    pos == "QB" ~ (r_td * 6) + (.1 * r_yd) + (ptd * p_td)
+     #    + (pass_yd_pt * p_yd) + (int_point * int) + (tp_conv * tp_c) + (fum_lost * fmb),
+     #    pos %in% c("RB","WR","TE","FB") ~ (6 * r_td) + (.1 * r_yd) + (pr * rec)
+     #    + (.1 * rec_yd) + (6 * rec_td) + (tp_conv * tp_c) + (fum_lost * fmb)))
   
   # Append the team's data to the combined data frame
   combined_df <- bind_rows(combined_df, team_df)
 }
 combined_df <- combined_df %>%
   select(-position)%>%
-  view()
+  mutate(recent_team = ifelse(recent_team == "LA", "LAR", recent_team))
 
 # Saving the dataframe 
-
 write.csv(combined_df,"players_2022.csv")
 
 
-#team stats csv
+# team stats csv
 combined_df2 <- tibble()
 for(team in nfl_teams){
   df <- read.csv("players_2022.csv")%>%
@@ -103,3 +102,5 @@ for(team in nfl_teams){
 }
 
 write.csv(combined_df2,"team_stats_2022.csv")
+
+message("generate_data.R complete")

@@ -1,9 +1,11 @@
 library(tidyverse)
 library(openxlsx)
+message("Running spreadsheet_creation.R")
+
 # setup
 nfl_teams <- c("ARI", "ATL", "BAL", "BUF", "CAR", "CHI", "CIN", "CLE",
                "DAL", "DEN", "DET", "GB", "HOU", "IND", "JAX", "KC",
-               "LAC", "LA", "LV", "MIA", "MIN", "NE", "NO", "NYG",
+               "LAC", "LAR", "LV", "MIA", "MIN", "NE", "NO", "NYG",
                "NYJ", "PHI", "PIT", "SEA", "SF", "TB", "TEN", "WAS")
 
 df <- read.csv("players_2022.csv")
@@ -34,16 +36,52 @@ for(team_ in nfl_teams){
     cmp_pct = numeric(),p_td = numeric(),int = numeric(),fmb = numeric())
   
   writeDataTable(wb, sheet = team_, x = glance_23, startRow = 32, startCol = 1)
-  # 2023-24 rosters insertion and formatting?
-  team_roster <- roster %>%
-    filter(team == team_)%>%
+  # 2023-24 QB's
+  qb_roster <- roster %>%
+    filter(team == team_,
+           POS == "QB")%>%
     add_column(g = 0, p_att = 0, cmp = 0, p_yd = 0, p_td = 0, int = 0,
                car = 0, r_yd = 0, r_td = 0, tgt = 0, rec = 0, rec_yd = 0,
                rec_td = 0, fmb = 0, tp_c = 0, f_ppr = 0, tgt_share = 0,
                ypc = 0, ypr = 0, cmp_pct = 0, td_rate = 0, f_custom = 0)%>%
     select(-X)
-  writeDataTable(wb, sheet = team_, x = team_roster,startRow = 35,startCol = 1)
+  writeDataTable(wb, sheet = team_, x = qb_roster,startRow = 35,startCol = 1)
+  
+  # 2023-24 RB's
+  rb_roster <- roster %>%
+    filter(team == team_,
+           POS == "RB")%>%
+    add_column(g = 0, p_att = 0, cmp = 0, p_yd = 0, p_td = 0, int = 0,
+               car = 0, r_yd = 0, r_td = 0, tgt = 0, rec = 0, rec_yd = 0,
+               rec_td = 0, fmb = 0, tp_c = 0, f_ppr = 0, tgt_share = 0,
+               ypc = 0, ypr = 0, cmp_pct = 0, td_rate = 0, f_custom = 0)%>%
+    select(-X)
+  writeDataTable(wb, sheet = team_, x = rb_roster,startRow = 45,startCol = 1)
+  
+  # 2023-24 WR's
+  wr_roster <- roster %>%
+    filter(team == team_,
+           POS == "WR")%>%
+    add_column(g = 0, p_att = 0, cmp = 0, p_yd = 0, p_td = 0, int = 0,
+               car = 0, r_yd = 0, r_td = 0, tgt = 0, rec = 0, rec_yd = 0,
+               rec_td = 0, fmb = 0, tp_c = 0, f_ppr = 0, tgt_share = 0,
+               ypc = 0, ypr = 0, cmp_pct = 0, td_rate = 0, f_custom = 0)%>%
+    select(-X)
+  writeDataTable(wb, sheet = team_, x = wr_roster,startRow = 60,startCol = 1)
+  
+  # 2023-24 TE's
+  te_roster <- roster %>%
+    filter(team == team_,
+           POS == "TE")%>%
+    add_column(g = 0, p_att = 0, cmp = 0, p_yd = 0, p_td = 0, int = 0,
+               car = 0, r_yd = 0, r_td = 0, tgt = 0, rec = 0, rec_yd = 0,
+               rec_td = 0, fmb = 0, tp_c = 0, f_ppr = 0, tgt_share = 0,
+               ypc = 0, ypr = 0, cmp_pct = 0, td_rate = 0, f_custom = 0)%>%
+    select(-X)
+  writeDataTable(wb, sheet = team_, x = te_roster,startRow = 75,startCol = 1)
 }
 
 # Saving the workbook to test_xlsx.xlsx
 saveWorkbook(wb, "test_xlsx.xlsx",overwrite = T)
+
+message("spreadsheet_creation.R complete")
