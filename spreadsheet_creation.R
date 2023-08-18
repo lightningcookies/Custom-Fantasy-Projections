@@ -12,6 +12,9 @@ df <- read.csv("players_2022.csv")
 roster <- read.csv("2023_rosters.csv")
 glance <- read.csv("team_stats_2022.csv")
 
+#fix washington
+roster <- roster %>% 
+  mutate(team = if_else(team == "WSH", "WAS", team))
 
 # start
 wb <- createWorkbook()
@@ -36,6 +39,10 @@ for(team_ in nfl_teams){
     cmp_pct = numeric(),p_td = numeric(),int = numeric(),fmb = numeric())
   
   writeDataTable(wb, sheet = team_, x = glance_23, startRow = 32, startCol = 1)
+  
+  #fixing washington
+  ifelse(team_ == "WAS", "WSH", team_)
+  
   # 2023-24 QB's
   qb_roster <- roster %>%
     filter(team == team_,
@@ -82,6 +89,6 @@ for(team_ in nfl_teams){
 }
 
 # Saving the workbook to test_xlsx.xlsx
-saveWorkbook(wb, "test_xlsx.xlsx",overwrite = T)
+saveWorkbook(wb, "test_xlsx_aug18.xlsx",overwrite = T)
 
 message("spreadsheet_creation.R complete")
