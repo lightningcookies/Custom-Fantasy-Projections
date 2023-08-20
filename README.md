@@ -20,5 +20,5 @@ Instructions:
    c. ----Coming soon---- import/export CSV of your rankings in a compact form
 
 This is my summer hobby project! If you like what you see, please give it a star :) I am currently studying statistics/Data Science at BYU & am looking for an internship
-Any suggestions are more than welcome! I'm new to GitHub and open-sourcing so please be patient. 
 
+Any suggestions are more than welcome! I'm new to GitHub and open-sourcing so please be patient. I especially would love any help with VBA and automating the spreadsheet better.
