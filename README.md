@@ -10,11 +10,11 @@ Working on:
 2. input and output a CSV file of your projections for editing/viewing
 3. Custom fantasy scoring (currently ____ scoring only) 
 
-Instructions:
-1. Download _____ and open
-2. Allow macro's.
+Instructions for download and use:
+1. Download [CustomProjectionsV1](https://github.com/lightningcookies/Custom-Fantasy-Projections/raw/main/CustomProjectionsV1.xlsm) and save to your system.
+2. Open with Microsoft Excel and in the top bar, click to Allow macro's.
 3. Fill out team-by-team projections. I suggest referencing betting markets & other fantasy projections
-4. head to the home page, press buttons that will execute macro's. These will
+4. head to the home page, press button that will execute macro's. These will
    a. Create a top 200 overall by projected fantasy points
    b. Create a top list for QB, RB, WR, and TE and put them in separate sheets
    c. ----Coming soon---- import/export CSV of your rankings in a compact form
