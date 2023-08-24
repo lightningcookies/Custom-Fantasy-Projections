@@ -81,8 +81,14 @@ write.csv(combined_df,"players_2022.csv")
 
 # team stats csv
 combined_df2 <- tibble()
+team_stats_df <- read.csv("players_2022.csv")
 for(team in nfl_teams){
-  df <- read.csv("players_2022.csv")%>%
+  #Fix LAR
+  if(team == "LA"){
+    team <- "LAR"
+  }
+
+  df <- team_stats_df %>%
     filter(recent_team == team)
   
   off_yd <- sum(df$p_yd) + sum(df$r_yd)
