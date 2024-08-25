@@ -8,8 +8,8 @@ This repository was built using R to create a template spreadsheet allowing you 
 5. Get overall rankings for individual positions and overall.
 
 ## Instructions for download and use:
-1. Download [custom_projections_2024V1](https://github.com/lightningcookies/Custom-Fantasy-Projections/blob/main/custom_projections_2024V1.xlsm) and save to your system.
-3. Open with Microsoft Excel and in the top bar, click Editing. A security-risk pop-up should appear. To get positional rankings and overall rankings, macro's have to be enabled. You should never allow macros in a file from someone you don't trust, although my hope is that you'll trust me & trust the fact that anyone can check the macros (because it's open source).
+1. Download From -> [custom_projections_2024V1](https://github.com/lightningcookies/Custom-Fantasy-Projections/blob/main/custom_projections_2024V1.xlsm) by clicking "download raw file", or by pressing ctrl + shift + s
+3. Open with Microsoft Excel. In the top bar, click Editing. A security-risk pop-up should appear. Macros have to be enabled to get positional rankings and overall rankings. Never allow macros in a file from someone you don't trust, although I hope that you can trust me & trust the fact that anyone can check the macros (because it's open source).
 - If you feel comfortable enabling macros, here is how you do it:
 - In most cases, you can unblock macros by modifying the properties of the file as follows:
 - Open Windows File Explorer and go to the folder where you saved the file.
@@ -22,7 +22,7 @@ This repository was built using R to create a template spreadsheet allowing you 
 - Apply table style again in case it gets screwed up and looks messy. 
 
 ### Extra
-This was my 2023 summer hobby project! If you like what you see, please give it a star :) I just graduated with a BS in statistics: data science at BYU. My hope is that I can present this project to potential employers as proof of my skills :) 
+This was my 2023 summer hobby project! I revisited it quickly for 2024. I didn't make any major improvements this year. I hope to make more improvements for 2025! If you like what you see, please give it a star :) I just graduated with a BS in statistics: data science at BYU. I hope that I can present this project to potential employers as proof of my skills :) 
 
 Any suggestions are more than welcome! I'm new to GitHub and open-sourcing so please be patient. I especially would love any help with VBA and automating the spreadsheet better.
 
