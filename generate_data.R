@@ -19,7 +19,7 @@ fum_lost <- (-2)
 
 # filter df for faster performance
 df_filtered <- df %>%
-  filter(season == 2022,
+  filter(season == 2023,
          season_type == "REG") %>%
   select(position, player_name, recent_team, targets,target_share, receptions,
          receiving_yards, receiving_tds, rushing_yards, rushing_tds,
@@ -76,12 +76,12 @@ combined_df <- combined_df %>%
   mutate(recent_team = ifelse(recent_team == "LA", "LAR", recent_team))
 
 # Saving the dataframe 
-write.csv(combined_df,"players_2022.csv")
+write.csv(combined_df,"players_2023.csv")
 
 
 # team stats csv
 combined_df2 <- tibble()
-team_stats_df <- read.csv("players_2022.csv")
+team_stats_df <- read.csv("players_2023.csv")
 for(team in nfl_teams){
   #Fix LAR
   if(team == "LA"){
@@ -107,6 +107,6 @@ for(team in nfl_teams){
   combined_df2 <- bind_rows(combined_df2,df2)
 }
 
-write.csv(combined_df2,"team_stats_2022.csv")
+write.csv(combined_df2,"team_stats_2023.csv")
 
 message("generate_data.R complete")

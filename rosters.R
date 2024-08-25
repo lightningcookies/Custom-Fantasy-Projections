@@ -36,4 +36,4 @@ combined_df <- combined_df %>%
   filter(POS %in% c("QB", "RB", "TE", "WR"))
 
 # Write to "2023_rosters.csv"
-write.csv(combined_df, "2023_rosters.csv")
+write.csv(combined_df, "2024_rosters.csv")

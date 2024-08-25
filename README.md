@@ -1,8 +1,8 @@
 # Custom-Fantasy-Projections
 This repository was built using R to create a template spreadsheet that will allow you to go team by team projecting fantasy output just like the professionals! This aims tow be helpful in your own fantasy football/best ball leagues! It's easy to get caught up on players you like, but are your projections in line with where you would draft him? Don't worry about all the nitty-gritty R scripts and macros, I have made it all neat inside one spreadsheet file. If you are interested, feel free to dive deep and see how I created this template!
 ## Current Features:
-1. 2022 Fantasy football stats and results for reference.
-2. 2023 Team rosters for QB, RB, WR, and TE positions.
+1. 2023 Fantasy football stats and results for reference.
+2. 2024 Team rosters for QB, RB, WR, and TE positions.
 3. Compare this year's to last year's statistics team by team.
 4. Input your own custom scoring format for your league.
 5. Get overall rankings for individual positions and overall.
@@ -22,7 +22,7 @@ This repository was built using R to create a template spreadsheet that will all
 - Apply table style again in case it gets screwed up and looks messy. 
 
 ### Extra
-This is my summer hobby project! If you like what you see, please give it a star :) I am currently studying statistics/Data Science at BYU & am looking for an internship. My hope is that I can present this project to potential employers as proof of my skills :)
+This was my 2023 summer hobby project! If you like what you see, please give it a star :) I just graduated with a BS in statistics: data science at BYU. My hope is that I can present this project to potential employers as proof of my skills :) 
 
 Any suggestions are more than welcome! I'm new to GitHub and open-sourcing so please be patient. I especially would love any help with VBA and automating the spreadsheet better.
 

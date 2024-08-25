@@ -7,7 +7,7 @@ library(nflfastR)
 # source("rosters.R")
 
 # 2. Generate player stats
-stats <- load_player_stats(seasons = 2022)
+stats <- load_player_stats(seasons = 2023)
 df <- write.csv(stats, file = "player_data.csv")
 
 # 3. Generate Data
