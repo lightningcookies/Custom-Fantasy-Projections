@@ -31,3 +31,7 @@ Any suggestions are more than welcome! I'm new to GitHub and open-sourcing so pl
 2. adding more advanced stats
 3. adding more graphs and historical context
 4. learn more about macros and not rely on LLM's. 
+
+
+2026 update: project has been implemented as a web app by anothwr user.
+check hutchball.com 
