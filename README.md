@@ -49,6 +49,26 @@ NFLVERSE_STATS_SEASON=2025 python3 scripts/nflverse_snapshot.py
 
 Useful references while projecting: [DraftKings player props](https://sportsbook.draftkings.com/leagues/football/nfl?category=player-stats) and [FantasyPros projections](https://www.fantasypros.com/nfl/projections/rb.php?week=draft).
 
+## Web app (Excel replacement, MVP)
+
+The **`webapp/`** folder is a **FastAPI + SQLite** service plus a small static UI:
+
+- Editable projection cells per team (same stat columns as `players_*.csv`), saved to SQLite with debounced PATCH requests.
+- **Combined QB/RB/WR/TE** board across all teams (replaces the “Combined\_\*” / “Overall” macro consolidation), sorted by a simple estimated PPR.
+- **Reference** columns join best-effort from the bundled reference CSV when names match.
+
+Run locally:
+
+```bash
+cd webapp
+pip install -r requirements.txt
+python3 -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+Open `http://localhost:8000/`, create a **New workbook**, pick a team, edit cells. Configuration uses env prefix **`CFP_`** (see `webapp/app/main.py`): `CFP_REPO_ROOT`, `CFP_ROSTER_CSV`, `CFP_REFERENCE_CSV`, `CFP_DB_PATH`.
+
+Details: `webapp/HOSTING.txt`.
+
 ## R package metadata
 
 A minimal **`DESCRIPTION`** lists Imports for `devtools::install_deps()` or `renv` workflows.
