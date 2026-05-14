@@ -1,0 +1,13 @@
+{
+  "name": "custom-fantasy-projections-site",
+  "private": true,
+  "description": "Static site build: CSVs in repo root to JSON under site/data/",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-data.mjs",
+    "serve": "npx --yes serve site -p 4173"
+  },
+  "devDependencies": {
+    "csv-parse": "^5.5.6"
+  }
+}

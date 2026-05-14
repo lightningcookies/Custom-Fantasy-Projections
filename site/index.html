@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Browse NFL rosters, 2023 fantasy season totals, and team offensive stats — a static companion to Custom Fantasy Projections."
+    />
+    <title>Custom Fantasy Projections</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Instrument+Sans:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#home" class="logo" data-nav>Custom Fantasy Projections</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#home" data-nav class="nav-link is-active">Home</a>
+          <a href="#rosters" data-nav class="nav-link">2024 rosters</a>
+          <a href="#season" data-nav class="nav-link">2023 players</a>
+          <a href="#teams" data-nav class="nav-link">2023 teams</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="main">
+      <section id="panel-home" class="panel is-visible" aria-labelledby="home-title">
+        <div class="hero">
+          <p class="eyebrow">NFL · Fantasy football</p>
+          <h1 id="home-title">Team-first projections, now in the browser</h1>
+          <p class="lede">
+            This site ships prebuilt data from the repository: 2024 depth-chart style rosters, 2023
+            regular-season fantasy totals (from nflfastR-style game logs), and team offensive
+            summaries. There is no server — upload the <code class="inline-code">site</code> folder
+            to any static host (Netlify, Cloudflare Pages, GitHub Pages, S3).
+          </p>
+          <div class="hero-actions">
+            <a href="#rosters" class="btn btn-primary" data-nav>Explore rosters</a>
+            <a href="#season" class="btn btn-ghost" data-nav>2023 fantasy leaders</a>
+          </div>
+          <p class="meta" id="build-meta" aria-live="polite"></p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h2>Rosters</h2>
+            <p>Filter by franchise and position (QB, RB, WR, TE). Data source: <code class="inline-code">2024_rosters.csv</code>.</p>
+            <a href="#rosters" class="card-link" data-nav>Open rosters →</a>
+          </article>
+          <article class="card">
+            <h2>2023 season totals</h2>
+            <p>Per-player sums for standard and PPR fantasy points across the regular season.</p>
+            <a href="#season" class="card-link" data-nav>View players →</a>
+          </article>
+          <article class="card">
+            <h2>Team offense</h2>
+            <p>Yards, passing efficiency, and scoring drivers aggregated by team from 2023.</p>
+            <a href="#teams" class="card-link" data-nav>Team table →</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="panel-rosters" class="panel" aria-labelledby="rosters-title" hidden>
+        <div class="section-head">
+          <h1 id="rosters-title">2024 rosters</h1>
+          <p class="section-desc">Filter and sort the roster export bundled with this project.</p>
+        </div>
+        <div class="toolbar">
+          <label class="field">
+            <span class="field-label">Team</span>
+            <select id="roster-team" class="select"></select>
+          </label>
+          <fieldset class="pos-fieldset">
+            <legend class="field-label">Position</legend>
+            <div id="roster-pos" class="chip-group" role="group"></div>
+          </fieldset>
+          <label class="field field-grow">
+            <span class="field-label">Search</span>
+            <input type="search" id="roster-search" class="input" placeholder="Player name…" autocomplete="off" />
+          </label>
+          <button type="button" class="btn btn-ghost" id="roster-csv">Download CSV</button>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" id="roster-table">
+            <thead>
+              <tr>
+                <th scope="col"><button type="button" class="th-btn" data-roster-sort="name">Name</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-roster-sort="pos">Pos</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-roster-sort="team">Team</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-roster-sort="age">Age</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-roster-sort="exp">Exp</button></th>
+                <th scope="col">College</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="table-foot" id="roster-count" aria-live="polite"></p>
+      </section>
+
+      <section id="panel-season" class="panel" aria-labelledby="season-title" hidden>
+        <div class="section-head">
+          <h1 id="season-title">2023 fantasy season totals</h1>
+          <p class="section-desc">Regular season only. Fantasy points summed by player from weekly logs.</p>
+        </div>
+        <div class="toolbar">
+          <fieldset class="pos-fieldset">
+            <legend class="field-label">Position</legend>
+            <div id="season-pos" class="chip-group" role="group"></div>
+          </fieldset>
+          <label class="field field-grow">
+            <span class="field-label">Search</span>
+            <input type="search" id="season-search" class="input" placeholder="Player name…" autocomplete="off" />
+          </label>
+          <button type="button" class="btn btn-ghost" id="season-csv">Download CSV</button>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" id="season-table">
+            <thead>
+              <tr>
+                <th scope="col"><button type="button" class="th-btn" data-season-sort="name">Player</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-season-sort="position">Pos</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-season-sort="team">Team</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-season-sort="games">G</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-season-sort="fantasyPpr">PPR</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-season-sort="fantasy">Std</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-season-sort="passYd">Pass Yd</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-season-sort="rushYd">Rush Yd</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-season-sort="recYd">Rec Yd</button></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="table-foot" id="season-count" aria-live="polite"></p>
+      </section>
+
+      <section id="panel-teams" class="panel" aria-labelledby="teams-title" hidden>
+        <div class="section-head">
+          <h1 id="teams-title">2023 team offense</h1>
+          <p class="section-desc">Season aggregates from <code class="inline-code">team_stats_2023.csv</code>.</p>
+        </div>
+        <div class="toolbar">
+          <label class="field field-grow">
+            <span class="field-label">Search</span>
+            <input type="search" id="team-search" class="input" placeholder="Team name or code…" autocomplete="off" />
+          </label>
+          <button type="button" class="btn btn-ghost" id="team-csv">Download CSV</button>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" id="team-table">
+            <thead>
+              <tr>
+                <th scope="col"><button type="button" class="th-btn" data-team-sort="label">Team</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-team-sort="offYd">Off Yd</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-team-sort="passYd">Pass Yd</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-team-sort="rushYd">Rush Yd</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-team-sort="passTd">Pass TD</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-team-sort="rushTd">Rush TD</button></th>
+                <th scope="col"><button type="button" class="th-btn" data-team-sort="int">INT</button></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="table-foot" id="team-count" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Open source data pipeline lives in the repo; rebuild JSON with <code class="inline-code">npm run build</code>.</p>
+    </footer>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

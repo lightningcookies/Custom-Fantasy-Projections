@@ -1,0 +1,23 @@
+Custom Fantasy Projections — static site
+========================================
+
+Build (optional if data/*.json is already committed):
+  npm install
+  npm run build
+
+Preview locally:
+  npm run serve
+  Open http://localhost:4173
+
+Deploy
+------
+Netlify / Cloudflare Pages / Vercel:
+  - Root directory: repository root (or only the site/ folder if you copy it with data included)
+  - Build command: npm run build
+  - Publish directory: site
+
+GitHub Pages (project site):
+  - Actions: upload-artifact from site/ after npm run build, or
+  - Settings → Pages → Deploy from branch and choose /site if you commit built JSON under site/data/
+
+Important: open the site over http(s), not file:// — browsers block fetch() for local JSON otherwise.

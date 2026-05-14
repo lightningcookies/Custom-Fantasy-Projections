@@ -33,5 +33,6 @@ Any suggestions are more than welcome! I'm new to GitHub and open-sourcing so pl
 4. learn more about macros and not rely on LLM's. 
 
 
-2026 update: project has been implemented as a web app by anothwr user.
-check hutchball.com 
+## Web dashboard
+
+The `site/` folder is a static dashboard (rosters, 2023 fantasy totals, team offense). Build data with `npm install && npm run build`, preview with `npm run serve`. Publish the `site` directory to any static host; see `site/HOSTING.txt`.
