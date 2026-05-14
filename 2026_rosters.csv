@@ -1,0 +1,790 @@
+Name,POS,Age,Exp,College,team
+Carson Beck,QB,23,0,--,ARI
+Gardner Minshew,QB,29,7,Washington State,ARI
+Jacoby Brissett,QB,33,10,N.C. State; Florida,ARI
+Kedon Slovis,QB,25,2,BYU; Pittsburgh; USC,ARI
+Bam Knight,RB,25,4,N.C. State,ARI
+Corey Kiner,RB,24,1,Cincinnati; LSU,ARI
+James Conner,RB,31,9,Pittsburgh,ARI
+Trey Benson,RB,23,2,Florida State; Oregon,ARI
+Tyler Allgeier,RB,26,4,BYU,ARI
+Elijah Higgins,TE,25,3,Stanford,ARI
+Josiah Deguara,TE,29,6,Cincinnati,ARI
+Pharaoh Brown,TE,32,9,Oregon,ARI
+Rivaldo Fairweather,TE,23,1,Auburn; Florida International,ARI
+Teagan Quitoriano,TE,26,4,Oregon State,ARI
+Tip Reiman,TE,24,2,Illinois,ARI
+Trey McBride,TE,26,4,Colorado State,ARI
+Andre Baccellia,WR,29,5,Washington,ARI
+Bryson Green,WR,23,1,Wisconsin; Oklahoma State,ARI
+Devin Duvernay,WR,28,6,Texas,ARI
+Ihmir Smith-Marsette,WR,26,5,Iowa,ARI
+Jalen Brooks,WR,26,3,South Carolina; Tarleton State; Wingate,ARI
+Kendrick Bourne,WR,30,9,Eastern Washington,ARI
+Marvin Harrison Jr.,WR,23,2,Ohio State,ARI
+Michael Wilson,WR,26,3,Stanford,ARI
+Simi Fehoko,WR,28,5,Stanford,ARI
+Tejhaun Palmer,WR,25,2,UAB,ARI
+Xavier Weaver,WR,25,2,Colorado; University of South Florida,ARI
+Zay Jones,WR,31,9,East Carolina,ARI
+Easton Stick,QB,30,7,North Dakota State,ATL
+Emory Jones,QB,26,2,Cincinnati; Arizona State; Florida,ATL
+Michael Penix Jr.,QB,26,2,Washington; Indiana,ATL
+Trevor Siemian,QB,34,11,Northwestern,ATL
+Tua Tagovailoa,QB,28,6,Alabama,ATL
+Bijan Robinson,RB,24,3,Texas,ATL
+Brian Robinson,RB,27,4,Alabama,ATL
+Carlos Washington,RB,27,3,Southeastern Louisiana,ATL
+Nate Carter,RB,23,1,Michigan State; Connecticut,ATL
+Tyler Goodson,RB,25,4,Iowa,ATL
+Austin Hooper,TE,31,10,Stanford,ATL
+Charlie Woerner,TE,28,6,Georgia,ATL
+Joshua Simon,TE,25,1,South Carolina; Western Kentucky,ATL
+Kyle Pitts,TE,25,5,Florida,ATL
+Casey Washington,WR,25,2,Illinois,ATL
+Chris Blair,WR,28,5,Alcorn State,ATL
+Deven Thompkins,WR,26,4,Utah State,ATL
+Drake London,WR,24,4,USC,ATL
+Dylan Drummond,WR,26,3,Eastern Michigan,ATL
+Jahan Dotson,WR,26,4,Penn State,ATL
+KhaDarel Hodge,WR,32,8,Prairie View A&M; Hinds CC; Alcorn State,ATL
+Malik Heath,WR,26,3,Mississippi; Mississippi State,ATL
+Olamide Zaccheaus,WR,28,7,Virginia,ATL
+Vinny Anthony II,WR,22,0,--,ATL
+Cooper Rush,QB,32,9,Central Michigan; Tarrant County JC,BAL
+Lamar Jackson,QB,29,8,Louisville,BAL
+Skylar Thompson,QB,28,4,Kansas State,BAL
+Tyler Huntley,QB,28,6,Utah,BAL
+Derrick Henry,RB,32,10,Alabama,BAL
+Justice Hill,RB,28,7,Oklahoma State,BAL
+Lucas Scott,RB,22,1,Army,BAL
+Rasheen Ali,RB,25,2,Marshall,BAL
+Durham Smythe,TE,30,8,Notre Dame,BAL
+Mark Andrews,TE,30,8,Oklahoma,BAL
+Cornelius Johnson,WR,25,2,Michigan,BAL
+Dayton Wade,WR,25,2,Mississippi; Western Kentucky,BAL
+DeAndre Hopkins,WR,33,13,Clemson,BAL
+Devontez Walker,WR,24,2,North Carolina; Kent State; North Carolina Central,BAL
+Ja'Kobi Lane,WR,21,0,--,BAL
+LaJohntay Wester,WR,24,1,Colorado; Florida Atlantic,BAL
+Rashod Bateman,WR,26,5,Minnesota,BAL
+Xavier Guillory,WR,24,0,Arizona State; Idaho State,BAL
+Zay Flowers,WR,25,3,Boston College,BAL
+Josh Allen,QB,29,8,Wyoming; Reedley,BUF
+Kyle Allen,QB,30,8,Houston; Texas A&M,BUF
+Shane Buechele,QB,28,5,SMU,BUF
+Ben VanSumeren,RB,26,3,Michigan State; Michigan,BUF
+Desmond Reid,RB,21,0,--,BUF
+Frank Gore Jr.,RB,24,2,Southern Mississippi,BUF
+James Cook,RB,26,4,Georgia,BUF
+Ray Davis,RB,26,2,Kentucky; Vanderbilt; Temple,BUF
+Ty Johnson,RB,28,7,Maryland,BUF
+Dalton Kincaid,TE,26,3,Utah; Univ of California-San Diego,BUF
+Dawson Knox,TE,29,7,Mississippi,BUF
+Jackson Hawes,TE,25,1,Georgia Tech; Yale,BUF
+Keleki Latu,TE,23,1,Washington; Nevada,BUF
+Brandin Cooks,WR,32,12,Oregon State,BUF
+Curtis Samuel,WR,29,9,Ohio State,BUF
+DJ Moore,WR,29,8,Maryland,BUF
+Gabe Davis,WR,27,6,UCF,BUF
+Jalen Virgil,WR,27,4,Appalachian State; UMass Amherst,BUF
+Josh Palmer,WR,26,5,Tennessee,BUF
+Keon Coleman,WR,22,2,Florida State; Michigan State,BUF
+Khalil Shakir,WR,26,4,Boise State,BUF
+Mecole Hardman,WR,28,7,Georgia,BUF
+Stephen Gosnell,WR,24,1,Virginia Tech; North Carolina,BUF
+Trent Sherfield,WR,30,8,Vanderbilt,BUF
+Tyrell Shavers,WR,26,3,San Diego State; Mississippi State; Alabama,BUF
+Bryce Young,QB,24,3,Alabama,CAR
+Haynes King,QB,25,0,--,CAR
+Kenny Pickett,QB,27,4,Pittsburgh,CAR
+Will Grier,QB,31,7,West Virginia; Florida State,CAR
+AJ Dillon,RB,28,6,Boston College,CAR
+Anthony Tyus III,RB,23,1,Ohio,CAR
+Chuba Hubbard,RB,26,5,Oklahoma State,CAR
+Jonathon Brooks,RB,22,2,Texas,CAR
+Montrell Johnson Jr.,RB,23,1,Florida; Louisiana,CAR
+Trevor Etienne,RB,21,1,Georgia; Florida,CAR
+Bryce Pierre,TE,25,1,UCLA; Arizona State,CAR
+Feleipe Franks,TE,28,5,Arkansas,CAR
+Ja'Tavion Sanders,TE,23,2,Texas,CAR
+James Mitchell,TE,26,4,Virginia Tech,CAR
+Mitchell Evans,TE,23,1,Notre Dame,CAR
+Tommy Tremble,TE,25,5,Notre Dame,CAR
+Ainias Smith,WR,24,2,Texas A&M,CAR
+Brycen Tremayne,WR,26,3,Stanford,CAR
+Dan Chisena,WR,29,6,Penn State,CAR
+David Moore,WR,31,9,East Central,CAR
+Ja'Seem Reed,WR,23,1,San Diego,CAR
+Jalen Coker,WR,24,2,Holy Cross,CAR
+Jimmy Horn Jr.,WR,23,1,Colorado; University of South Florida,CAR
+John Metchie III,WR,25,4,Alabama,CAR
+Tetairoa McMillan,WR,23,1,Arizona,CAR
+Xavier Legette,WR,25,2,South Carolina,CAR
+Caleb Williams,QB,24,2,USC; Oklahoma,CHI
+Case Keenum,QB,38,14,Houston,CHI
+Miller Moss,QB,24,0,--,CHI
+Tyson Bagent,QB,25,3,Shepherd,CHI
+Brittain Brown,RB,28,4,UCLA,CHI
+D'Andre Swift,RB,27,6,Georgia,CHI
+Deion Hankins,RB,25,1,Texas State-San Marcos,CHI
+Kyle Monangai,RB,23,1,Rutgers,CHI
+Roschon Johnson,RB,25,3,Texas,CHI
+Cole Kmet,TE,27,6,Notre Dame,CHI
+Colston Loveland,TE,22,1,Michigan,CHI
+Nikola Kalinic,TE,29,4,York (Canada),CHI
+Qadir Ismail,TE,26,2,Samford; Villanova,CHI
+Stephen Carlson,TE,29,7,Princeton,CHI
+JP Richardson,WR,24,1,TCU; Oklahoma State,CHI
+Jahdae Walker,WR,23,1,Texas A&M; Grand Valley,CHI
+Kalif Raymond,WR,31,10,Holy Cross,CHI
+Luther Burden III,WR,22,1,Missouri,CHI
+Maurice Alexander,WR,29,4,Florida International,CHI
+Rome Odunze,WR,23,2,Washington,CHI
+Joe Burrow,QB,29,6,LSU; Ohio State,CIN
+Joe Flacco,QB,41,18,Delaware; Pittsburgh,CIN
+Josh Johnson,QB,39,18,San Diego,CIN
+Sean Clifford,QB,27,3,Penn State,CIN
+Chase Brown,RB,26,3,Illinois; Western Michigan,CIN
+Gary Brightwell,RB,28,5,Arizona,CIN
+Kendall Milton,RB,24,2,Georgia,CIN
+Kentrel Bullock,RB,24,0,--,CIN
+Samaje Perine,RB,30,9,Oklahoma,CIN
+Tahj Brooks,RB,24,1,Texas Tech,CIN
+Cam Grandy,TE,26,2,Illinois State; Missouri Western,CIN
+Drew Sample,TE,30,7,Washington,CIN
+Erick All,TE,25,2,Iowa; Michigan,CIN
+Mike Gesicki,TE,30,8,Penn State,CIN
+Tanner Hudson,TE,31,8,Southern Arkansas; Memphis,CIN
+Andrei Iosivas,WR,26,3,Princeton,CIN
+Charlie Jones,WR,27,3,Purdue; Iowa,CIN
+Ja'Marr Chase,WR,26,5,LSU,CIN
+Jordan Moore,WR,24,1,Duke,CIN
+Ke'Shawn Williams,WR,24,1,Indiana; Wake Forest,CIN
+Kendric Pryor,WR,28,4,Wisconsin,CIN
+Mitchell Tinsley,WR,26,3,Penn State; Western Kentucky,CIN
+Tee Higgins,WR,27,6,Clemson,CIN
+Xavier Johnson,WR,27,2,Ohio State,CIN
+Deshaun Watson,QB,30,9,Clemson,CLE
+Dillon Gabriel,QB,25,1,Oregon; Oklahoma; UCF,CLE
+Shedeur Sanders,QB,24,1,Colorado; Jackson State University,CLE
+Taylen Green,QB,23,0,--,CLE
+Ahmani Marshall,RB,24,1,Appalachian State; Wake Forest,CLE
+Dylan Sampson,RB,21,1,Tennessee,CLE
+Michael Burton,RB,34,11,Rutgers,CLE
+Quinshon Judkins,RB,22,1,Ohio State; Mississippi,CLE
+Raheim Sanders,RB,23,1,South Carolina; Arkansas,CLE
+Trayveon Williams,RB,28,7,Texas A&M,CLE
+Blake Whiteheart,TE,26,3,Wake Forest,CLE
+Brenden Bates,TE,26,2,Kentucky,CLE
+Caden Prieskorn,TE,26,1,Mississippi; Memphis,CLE
+David Njoku,TE,29,9,Miami,CLE
+Harold Fannin Jr.,TE,21,1,Bowling Green,CLE
+Jack Stoll,TE,28,5,Nebraska,CLE
+Sal Cannella,TE,29,1,Auburn,CLE
+Cedric Tillman,WR,26,3,Tennessee,CLE
+DeAndre Carter,WR,33,11,Sacramento State,CLE
+Gage Larvadain,WR,23,1,South Carolina; Miami (Ohio),CLE
+Isaiah Bond,WR,22,1,Texas; Alabama,CLE
+Isaiah Wooden,WR,26,0,Southern Utah State; Kent State,CLE
+Jamari Thrash,WR,25,2,Louisville; Georgia State,CLE
+Jerry Jeudy,WR,27,6,Alabama,CLE
+Luke Floriea,WR,24,1,Kent State,CLE
+Malachi Corley,WR,24,2,Western Kentucky,CLE
+Tylan Wallace,WR,27,5,Oklahoma State,CLE
+Dak Prescott,QB,32,10,Mississippi State,DAL
+Joe Milton III,QB,26,2,Tennessee; Michigan,DAL
+Sam Howell,QB,25,4,North Carolina,DAL
+Hunter Luepke,RB,26,3,North Dakota State,DAL
+Israel Abanikanda,RB,23,3,Pittsburgh,DAL
+Javonte Williams,RB,26,5,North Carolina,DAL
+Jaydon Blue,RB,22,1,Texas,DAL
+Malik Davis,RB,27,4,Florida,DAL
+Miles Sanders,RB,29,7,Penn State,DAL
+Phil Mafah,RB,23,1,Clemson,DAL
+Brevyn Spann-Ford,TE,26,2,Minnesota,DAL
+Jake Ferguson,TE,27,4,Wisconsin,DAL
+Luke Schoonmaker,TE,27,3,Michigan,DAL
+Princeton Fant,TE,27,3,Tennessee,DAL
+CeeDee Lamb,WR,27,6,Oklahoma,DAL
+George Pickens,WR,25,4,Georgia,DAL
+Jonathan Mingo,WR,25,3,Mississippi,DAL
+Jordan Hudson,WR,22,0,--,DAL
+KaVontae Turpin,WR,29,4,TCU,DAL
+Marquez Valdes-Scantling,WR,31,8,University of South Florida; N.C. State,DAL
+Parris Campbell,WR,28,7,Ohio State,DAL
+Ryan Flournoy,WR,26,2,Southeast Missouri State; Iowa Western CC,DAL
+Traeshon Holden,WR,24,1,Oregon; Alabama,DAL
+Tyler Johnson,WR,27,6,Minnesota,DAL
+Bo Nix,QB,26,2,Oregon; Auburn,DEN
+Jarrett Stidham,QB,29,7,Auburn; McLennan CC; Baylor,DEN
+Sam Ehlinger,QB,27,5,Texas,DEN
+Adam Prentice,RB,29,5,South Carolina,DEN
+Cody Schrader,RB,26,2,Missouri; Truman State University,DEN
+Deuce Vaughn,RB,24,3,Kansas State,DEN
+J.K. Dobbins,RB,27,6,Ohio State,DEN
+Jaleel McLaughlin,RB,25,3,Youngstown State,DEN
+RJ Harvey,RB,25,1,UCF; Virginia,DEN
+Tyler Badie,RB,27,4,Missouri,DEN
+Adam Trautman,TE,29,6,Dayton,DEN
+Caleb Lohner,TE,24,1,Utah; Baylor,DEN
+Evan Engram,TE,31,9,Mississippi,DEN
+Lucas Krull,TE,27,4,Pittsburgh,DEN
+Nate Adkins,TE,26,3,South Carolina,DEN
+Courtland Sutton,WR,30,8,SMU,DEN
+Jaylen Waddle,WR,27,5,Alabama,DEN
+Kolbe Katsis,WR,,0,--,DEN
+Lil'Jordan Humphrey,WR,28,7,Texas,DEN
+Marvin Mims Jr.,WR,24,3,Oklahoma,DEN
+Michael Bandy,WR,28,5,San Diego,DEN
+Pat Bryant,WR,23,1,Illinois,DEN
+Troy Franklin,WR,23,2,Oregon,DEN
+Jared Goff,QB,31,10,California,DET
+Malik Cunningham,QB,27,3,Louisville,DET
+Teddy Bridgewater,QB,33,12,Louisville,DET
+Isiah Pacheco,RB,27,4,Rutgers,DET
+Jabari Small,RB,24,2,Tennessee,DET
+Jacob Saylors,RB,26,3,East Tennessee State,DET
+Jahmyr Gibbs,RB,24,3,Alabama; Georgia Tech,DET
+Kye Robichaux,RB,23,1,Boston College; Western Kentucky,DET
+Sione Vaki,RB,24,2,Utah,DET
+Anthony Firkser,TE,31,9,Harvard,DET
+Brock Wright,TE,27,5,Notre Dame,DET
+Sam LaPorta,TE,25,3,Iowa,DET
+Shane Zylstra,TE,29,5,Minnesota State,DET
+Thomas Gordon,TE,25,1,Northwestern,DET
+Tyler Conklin,TE,30,8,Central Michigan; Northwood,DET
+Zach Horton,TE,23,1,Indiana; James Madison,DET
+Amon-Ra St. Brown,WR,26,5,USC,DET
+Dominic Lovett,WR,23,1,Georgia; Missouri,DET
+Greg Dortch,WR,27,7,Wake Forest,DET
+Isaac TeSlaa,WR,24,1,Arkansas; Hillsdale,DET
+Jackson Meeks,WR,23,1,Syracuse,DET
+Jameson Williams,WR,25,4,Alabama; Ohio State,DET
+Kendrick Law,WR,22,0,--,DET
+Tom Kennedy,WR,29,7,Bryant,DET
+Desmond Ridder,QB,26,4,Cincinnati,GB
+Jordan Love,QB,27,6,Utah State,GB
+Kyle McCord,QB,23,1,Syracuse; Ohio State,GB
+Tyrod Taylor,QB,36,15,Virginia Tech,GB
+Chris Brooks,RB,26,3,BYU; California,GB
+Damien Martinez,RB,22,1,Miami; Oregon State,GB
+Josh Jacobs,RB,28,7,Alabama,GB
+MarShawn Lloyd,RB,25,2,USC; South Carolina,GB
+Pierre Strong,RB,27,4,South Dakota State,GB
+Drake Dabney,TE,24,1,TCU; Baylor,GB
+John FitzPatrick,TE,26,4,Georgia,GB
+Josh Whyle,TE,26,3,Cincinnati,GB
+Luke Musgrave,TE,25,3,Oregon State,GB
+Messiah Swinson,TE,26,2,Arizona State; Missouri,GB
+RJ Maryland,TE,21,0,--,GB
+Tucker Kraft,TE,25,3,South Dakota State,GB
+Christian Watson,WR,27,4,North Dakota State,GB
+Isaiah Neyor,WR,24,1,Nebraska; Texas; Wyoming,GB
+Jakobie Keeney-James,WR,25,1,UMass Amherst; Eastern Washington,GB
+Jayden Reed,WR,26,3,Michigan State; Western Michigan,GB
+Matthew Golden,WR,22,1,Texas; Houston,GB
+Savion Williams,WR,24,1,TCU,GB
+Skyy Moore,WR,25,4,Western Michigan,GB
+Will Sheppard,WR,24,1,Colorado; Vanderbilt,GB
+C.J. Stroud,QB,24,3,Ohio State,HOU
+Davis Mills,QB,27,5,Stanford,HOU
+Graham Mertz,QB,25,1,Florida; Wisconsin,HOU
+British Brooks,RB,26,2,North Carolina,HOU
+Dare Ogunbowale,RB,32,9,Wisconsin,HOU
+David Montgomery,RB,28,7,Iowa State,HOU
+Jawhar Jordan,RB,26,2,Louisville; Syracuse,HOU
+Joe Mixon,RB,29,9,Oklahoma,HOU
+Joshua Pitsenberger,RB,,0,--,HOU
+Nick Chubb,RB,30,8,Georgia,HOU
+Woody Marks,RB,25,1,USC; Mississippi State,HOU
+Brevin Jordan,TE,25,5,Miami,HOU
+Cade Stover,TE,25,2,Ohio State,HOU
+Dalton Schultz,TE,29,8,Stanford,HOU
+Foster Moreau,TE,29,7,LSU,HOU
+Luke Lachey,TE,24,1,Iowa,HOU
+Braxton Berrios,WR,30,8,Miami,HOU
+Jared Wayne,WR,25,3,Pittsburgh,HOU
+Jayden Higgins,WR,23,1,Iowa State; Eastern Kentucky,HOU
+Jaylin Noel,WR,23,1,Iowa State,HOU
+Josh Kelly,WR,24,1,Texas Tech; Washington State; Fresno State,HOU
+Justin Watson,WR,30,8,Penn,HOU
+Nico Collins,WR,27,5,Michigan,HOU
+Tank Dell,WR,26,3,Houston; Independence Comm. College; Alabama A&M,HOU
+Xavier Hutchinson,WR,25,3,Iowa State,HOU
+Anthony Richardson,QB,23,3,Florida,IND
+Daniel Jones,QB,28,7,Duke,IND
+Riley Leonard,QB,23,1,Notre Dame; Duke,IND
+Seth Henigan,QB,23,1,Memphis,IND
+Ameer Abdullah,RB,32,11,Nebraska,IND
+DJ Giddens,RB,22,1,Kansas State,IND
+Jonathan Taylor,RB,27,6,Wisconsin,IND
+Salvon Ahmed,RB,27,6,Washington,IND
+Seth McGowan,RB,24,0,--,IND
+Ulysses Bentley IV,RB,25,1,Mississippi; SMU,IND
+Andrew Ogletree,TE,27,4,Youngstown State,IND
+Mo Alie-Cox,TE,32,9,Virginia Commonwealth Univ.,IND
+Sean McKeon,TE,28,6,Michigan,IND
+Tyler Warren,TE,23,1,Penn State,IND
+Will Mallory,TE,26,3,Miami,IND
+Alec Pierce,WR,26,4,Cincinnati,IND
+Anthony Gould,WR,25,2,Oregon State,IND
+Ashton Dulin,WR,28,7,Malone,IND
+Coleman Owen,WR,25,1,Ohio; Northern Arizona,IND
+D.J. Montgomery,WR,29,7,Austin Peay; Holmes County JC,IND
+Eli Pancol,WR,25,1,Duke,IND
+Josh Downs,WR,24,3,North Carolina,IND
+Laquon Treadwell,WR,30,10,Mississippi,IND
+Nick Westbrook-Ikhine,WR,29,6,Indiana,IND
+Carter Bradley,QB,26,2,South Alabama; Toledo,JAX
+Joey Aguilar,QB,24,0,--,JAX
+Nick Mullens,QB,31,9,Southern Mississippi,JAX
+Trevor Lawrence,QB,26,5,Clemson,JAX
+Bhayshul Tuten,RB,24,1,Virginia Tech; North Carolina A&T,JAX
+Chris Rodriguez Jr.,RB,26,3,Kentucky,JAX
+DeeJay Dallas,RB,27,6,Miami,JAX
+Ja'Quinden Jackson,RB,24,1,Arkansas; Utah; Texas,JAX
+LeQuint Allen Jr.,RB,21,1,Syracuse,JAX
+Brenton Strange,TE,25,3,Penn State,JAX
+Hunter Long,TE,27,5,Boston College,JAX
+Patrick Herbert,TE,25,1,Oregon,JAX
+Quintin Morris,TE,27,5,Bowling Green,JAX
+Austin Trammell,WR,27,5,Rice,JAX
+Brian Thomas Jr.,WR,23,2,LSU,JAX
+Chandler Brayboy,WR,24,1,Elon,JAX
+Jakobi Meyers,WR,29,7,N.C. State,JAX
+Joshua Cephus,WR,25,2,Texas-San Antonio,JAX
+Parker Washington,WR,24,3,Penn State,JAX
+Tim Jones,WR,27,5,Southern Mississippi,JAX
+Tim Patrick,WR,32,9,Utah; Grossmont,JAX
+Chris Oladokun,QB,28,4,South Dakota State,KC
+Garrett Nussmeier,QB,24,0,--,KC
+Justin Fields,QB,27,5,Ohio State,KC
+Patrick Mahomes,QB,30,9,Texas Tech,KC
+Brashard Smith,RB,23,1,SMU; Miami,KC
+Emari Demercado,RB,27,3,TCU,KC
+Kareem Hunt,RB,30,9,Toledo,KC
+Keaontay Ingram,RB,26,4,USC,KC
+Kenneth Walker III,RB,25,4,Michigan State; Wake Forest,KC
+Jake Briningstool,TE,23,1,Clemson,KC
+Jared Wiley,TE,25,2,TCU; Texas,KC
+Noah Gray,TE,27,5,Duke,KC
+Robert Tonyan,TE,32,9,Indiana State,KC
+Travis Kelce,TE,36,13,Cincinnati,KC
+Tre Watson,TE,23,1,Texas A&M; Fresno State,KC
+Andrew Armstrong,WR,25,1,Arkansas; East Texas A&M,KC
+Jalen Royals,WR,23,1,Utah State,KC
+Jason Brownlee,WR,27,3,Southern Mississippi,KC
+Jimmy Holiday,WR,24,1,Louisiana Tech; Western Kentucky; Tennessee,KC
+JuJu Smith-Schuster,WR,29,9,USC,KC
+Nikko Remigio,WR,26,3,Fresno State,KC
+Rashee Rice,WR,26,3,SMU,KC
+Tyquan Thornton,WR,25,4,Baylor,KC
+Xavier Worthy,WR,23,2,Texas,KC
+Jimmy Garoppolo,QB,34,12,Eastern Illinois,LA
+Matthew Stafford,QB,38,17,Georgia,LA
+Stetson Bennett,QB,28,3,Georgia; Jones County JC,LA
+Blake Corum,RB,25,2,Michigan,LA
+Jarquez Hunter,RB,23,1,Auburn,LA
+Jordan Waters,RB,25,0,N.C. State; Duke,LA
+Kyren Williams,RB,25,4,Notre Dame,LA
+Ronnie Rivers,RB,27,4,Fresno State,LA
+Colby Parkinson,TE,27,6,Stanford,LA
+Davis Allen,TE,25,3,Clemson,LA
+Mark Redman,TE,24,1,Louisville; San Diego State,LA
+Nick Vannett,TE,33,10,Ohio State,LA
+Terrance Ferguson,TE,23,1,Oregon,LA
+Tyler Higbee,TE,33,10,Western Kentucky,LA
+Brennan Presley,WR,24,1,Oklahoma State,LA
+CJ Daniels,WR,24,0,--,LA
+Davante Adams,WR,33,12,Fresno State,LA
+Jordan Whittington,WR,25,2,Texas,LA
+Konata Mumpfield,WR,23,1,Pittsburgh; Akron,LA
+Mario Williams,WR,23,0,Tulane; Oklahoma,LA
+Puka Nacua,WR,24,3,BYU; Washington,LA
+Tru Edwards,WR,24,1,Louisiana Tech; Hawaii; Navarro,LA
+Tyler Scott,WR,24,3,Cincinnati,LA
+Xavier Smith,WR,28,3,Florida A&M,LA
+DJ Uiagalelei,QB,25,1,Florida State; Oregon State; Clemson,LAC
+Justin Herbert,QB,28,6,Oregon,LAC
+Trey Lance,QB,26,5,North Dakota State,LAC
+Alec Ingold,RB,29,7,Wisconsin,LAC
+Amar Johnson,RB,23,1,South Dakota State,LAC
+Hassan Haskins,RB,26,4,Michigan,LAC
+Jaret Patterson,RB,26,5,Buffalo,LAC
+Keaton Mitchell,RB,24,3,East Carolina,LAC
+Kimani Vidal,RB,24,2,Troy,LAC
+Najee Harris,RB,28,5,Alabama,LAC
+Omarion Hampton,RB,23,1,North Carolina,LAC
+Charlie Kolar,TE,27,4,Iowa State,LAC
+Oronde Gadsden II,TE,22,1,Syracuse,LAC
+Tanner McLachlan,TE,27,2,Arizona,LAC
+Thomas Yassmin,TE,26,2,Utah,LAC
+Tucker Fisk,TE,27,4,Stanford,LAC
+Will Dissly,TE,29,8,Washington,LAC
+Dalevon Campbell,WR,24,1,South Carolina,LAC
+Derius Davis,WR,25,3,TCU,LAC
+JaQuae Jackson,WR,26,2,Rutgers; California (PA),LAC
+Jerand Bradley,WR,23,0,--,LAC
+KeAndre Lambert-Smith,WR,24,1,Auburn; Penn State,LAC
+Keenan Allen,WR,34,13,California,LAC
+Ladd McConkey,WR,24,2,Georgia,LAC
+Luke Grimm,WR,24,1,Kansas,LAC
+Quentin Johnston,WR,24,3,TCU,LAC
+Tre Harris,WR,24,1,Mississippi; Louisiana Tech,LAC
+Aidan O'Connell,QB,27,3,Purdue,LV
+Kirk Cousins,QB,37,14,Michigan State,LV
+Ashton Jeanty,RB,22,1,Boise State,LV
+Chris Collier,RB,26,2,University of Lock Haven,LV
+Connor Heyward,RB,27,4,Michigan State,LV
+Dylan Laube,RB,26,2,New Hampshire,LV
+Raheem Mostert,RB,34,11,Purdue,LV
+Zamir White,RB,26,4,Georgia,LV
+Albert Okwuegbunam,TE,28,6,Missouri,LV
+Brock Bowers,TE,23,2,Georgia,LV
+Carter Runyon,TE,24,1,Towson; Shenandoah University,LV
+Ian Thomas,TE,29,8,Indiana; Nassau CC,LV
+Justin Shorter,TE,26,3,Florida; Penn State,LV
+Michael Mayer,TE,24,3,Notre Dame,LV
+Alex Bachman,WR,29,7,Wake Forest,LV
+Brenden Rice,WR,24,2,USC; Colorado,LV
+Dareke Young,WR,26,4,Lenoir Rhyne,LV
+Dont'e Thornton Jr.,WR,23,1,Tennessee; Oregon,LV
+Jack Bech,WR,23,1,TCU; LSU,LV
+Jalen Nailor,WR,27,4,Michigan State,LV
+Jonathan Brady,WR,22,0,--,LV
+Phillip Dorsett,WR,33,11,Miami,LV
+Shedrick Jackson,WR,26,3,Auburn,LV
+Tre Tucker,WR,25,3,Cincinnati,LV
+Tyler Lockett,WR,33,11,Kansas State,LV
+Cam Miller,QB,24,1,North Dakota State,MIA
+Malik Willis,QB,26,4,Liberty; Auburn,MIA
+Quinn Ewers,QB,23,1,Texas; Ohio State,MIA
+Alexander Mattison,RB,27,7,Boise State,MIA
+Anthony Hankerson,RB,22,0,--,MIA
+De'Von Achane,RB,24,3,Texas A&M,MIA
+Donovan Edwards,RB,23,1,Michigan,MIA
+Jaylen Wright,RB,23,2,Tennessee,MIA
+Ollie Gordon II,RB,22,1,Oklahoma State,MIA
+Ben Sims,TE,25,3,Baylor,MIA
+Cole Turner,TE,26,4,Nevada,MIA
+Darren Waller,TE,33,11,Georgia Tech,MIA
+Greg Dulcich,TE,26,4,UCLA,MIA
+Jalin Conyers,TE,24,1,Texas Tech; Arizona State; Oklahoma,MIA
+A.J. Henning,WR,24,1,Northwestern; Michigan,MIA
+Cedrick Wilson Jr.,WR,30,8,Boise State; Coffeyville CC,MIA
+Dee Eskridge,WR,29,5,Western Michigan,MIA
+Jalen Tolbert,WR,27,4,South Alabama,MIA
+Malik Washington,WR,25,2,Virginia; Northwestern,MIA
+Tahj Washington,WR,24,2,USC; Memphis,MIA
+Terrace Marshall Jr.,WR,25,5,LSU,MIA
+Theo Wease Jr.,WR,24,1,Missouri; Oklahoma,MIA
+Tutu Atwell,WR,26,5,Louisville,MIA
+Tyreek Hill,WR,32,10,West Alabama; Garden City CC; Oklahoma State,MIA
+Brett Rypien,QB,29,7,Boise State,MIN
+Carson Wentz,QB,33,10,North Dakota State,MIN
+J.J. McCarthy,QB,23,2,Michigan,MIN
+John Wolford,QB,30,7,Wake Forest,MIN
+Kyler Murray,QB,28,7,Oklahoma; Texas A&M,MIN
+Max Brosmer,QB,25,1,Minnesota; New Hampshire,MIN
+Aaron Jones,RB,31,9,Texas-El Paso,MIN
+Jordan Mason,RB,26,4,Georgia Tech,MIN
+Ben Yurosek,TE,24,1,Georgia; Stanford,MIN
+Bryson Nesbit,TE,23,1,North Carolina,MIN
+Gavin Bartholomew,TE,23,1,Pittsburgh,MIN
+Josh Oliver,TE,29,7,San Jose State,MIN
+T.J. Hockenson,TE,28,7,Iowa,MIN
+Dontae Fleming,WR,24,1,Tulane,MIN
+Jeshaun Jones,WR,26,2,Maryland,MIN
+Joaquin Davis,WR,23,1,North Carolina Central,MIN
+Jordan Addison,WR,24,3,USC; Pittsburgh,MIN
+Justin Jefferson,WR,26,6,LSU,MIN
+Marcus Sanders Jr.,WR,,0,--,MIN
+Myles Price,WR,24,1,Indiana; Texas Tech,MIN
+Tai Felton,WR,23,1,Maryland,MIN
+Zavier Scott,WR,26,3,Maine,MIN
+Drake Maye,QB,23,2,North Carolina,NE
+Joshua Dobbs,QB,31,9,Tennessee,NE
+Tommy DeVito,QB,27,3,Illinois; Syracuse,NE
+Antonio Gibson,RB,27,6,Memphis; East Central JC,NE
+Brock Lampe,RB,23,1,Northern Illinois,NE
+D'Ernest Johnson,RB,30,7,University of South Florida,NE
+Deneric Prince,RB,26,3,Tulsa; Texas A&M,NE
+Elijah Mitchell,RB,28,5,Louisiana-Lafayette,NE
+Lan Larison,RB,24,1,UC Davis,NE
+Reggie Gilliam,RB,28,6,Toledo,NE
+Rhamondre Stevenson,RB,28,5,Oklahoma; Cerritos College,NE
+Terrell Jennings,RB,25,2,Florida A&M,NE
+TreVeyon Henderson,RB,23,1,Ohio State,NE
+CJ Dippre,TE,24,1,Alabama; Maryland,NE
+Hunter Henry,TE,31,10,Arkansas,NE
+Jack Westover,TE,26,2,Washington,NE
+Julian Hill,TE,25,3,Campbell University,NE
+Tanner Arkin,TE,22,0,--,NE
+DeMario Douglas,WR,25,3,Liberty,NE
+Efton Chism III,WR,24,1,Eastern Washington,NE
+Jeremiah Webb,WR,24,1,South Alabama; South Dakota,NE
+Kayshon Boutte,WR,24,3,LSU,NE
+Kyle Williams,WR,23,1,Washington State,NE
+Mack Hollins,WR,32,9,North Carolina,NE
+Romeo Doubs,WR,26,4,Nevada,NE
+Stefon Diggs,WR,32,11,Maryland,NE
+Spencer Rattler,QB,25,2,South Carolina; Oklahoma,NO
+Taysom Hill,QB,35,9,BYU,NO
+Tyler Shough,QB,26,1,Louisville; Texas Tech; Oregon,NO
+Zach Wilson,QB,26,5,BYU,NO
+Alvin Kamara,RB,30,9,Tennessee; Hutchinson CC; Alabama,NO
+Audric Estimé,RB,22,2,Notre Dame,NO
+Devin Neal,RB,22,1,Kansas,NO
+Kendre Miller,RB,23,3,TCU,NO
+Travis Etienne,RB,27,5,Clemson,NO
+Ty Chandler,RB,28,4,North Carolina,NO
+Juwan Johnson,TE,29,6,Oregon; Penn State,NO
+Mason Pline,TE,26,2,Furman; Ferris State,NO
+Moliki Matavao,TE,23,1,UCLA,NO
+Noah Fant,TE,28,7,Iowa,NO
+Treyton Welch,TE,25,2,Wyoming,NO
+Zaire Mitchell-Paden,TE,26,4,Florida Atlantic,NO
+Bub Means,WR,25,2,Pittsburgh; Louisiana Tech,NO
+Chris Olave,WR,25,4,Ohio State,NO
+Damien Alford,WR,25,0,--,NO
+Dante Pettis,WR,30,8,Washington,NO
+Devaughn Vele,WR,28,2,Utah,NO
+Ja'Lynn Polk,WR,24,2,Washington; Texas Tech,NO
+Kevin Austin Jr.,WR,26,4,Notre Dame,NO
+Mason Tipton,WR,25,2,Yale,NO
+Ronnie Bell,WR,26,3,Michigan,NO
+Trey Palmer,WR,25,3,Nebraska; LSU,NO
+Brandon Allen,QB,33,10,Arkansas,NYG
+Jameis Winston,QB,32,11,Florida State,NYG
+Jaxson Dart,QB,23,1,Mississippi; USC,NYG
+Russell Wilson,QB,37,14,Wisconsin; N.C. State,NYG
+Cam Skattebo,RB,24,1,Arizona State; Sacramento State,NYG
+Dante Miller,RB,27,2,South Carolina; Columbia,NYG
+Devin Singletary,RB,28,7,Florida Atlantic,NYG
+Eric Gray,RB,26,3,Oklahoma; Tennessee,NYG
+Patrick Ricard,RB,31,9,Maine,NYG
+Tyrone Tracy Jr.,RB,26,2,Purdue; Iowa,NYG
+Chris Manhertz,TE,34,11,Canisius College,NYG
+Isaiah Likely,TE,26,4,Coastal Carolina,NYG
+Tanner Conner,TE,28,4,Idaho State,NYG
+Theo Johnson,TE,25,2,Penn State,NYG
+Thomas Fidone II,TE,23,1,Nebraska,NYG
+Beaux Collins,WR,23,1,Notre Dame; Clemson,NYG
+Bryce Ford-Wheaton,WR,26,3,West Virginia,NYG
+Calvin Austin III,WR,27,4,Memphis,NYG
+Dalen Cambre,WR,25,1,Louisiana,NYG
+Darius Slayton,WR,29,7,Auburn,NYG
+Darnell Mooney,WR,28,6,Tulane,NYG
+Gunner Olszewski,WR,29,7,Bemidji State University,NYG
+Isaiah Hodgins,WR,27,6,Oregon State,NYG
+Jalin Hyatt,WR,24,3,Tennessee,NYG
+Malachi Fields,WR,23,0,--,NYG
+Malik Nabers,WR,22,2,LSU,NYG
+Ryan Miller,WR,26,3,Furman,NYG
+Xavier Gipson,WR,25,3,Stephen F. Austin State,NYG
+Bailey Zappe,QB,27,4,Western Kentucky; Houston Christian University,NYJ
+Brady Cook,QB,24,1,Missouri,NYJ
+Cade Klubnik,QB,22,0,--,NYJ
+Geno Smith,QB,35,13,West Virginia,NYJ
+Braelon Allen,RB,22,2,Wisconsin,NYJ
+Breece Hall,RB,24,4,Iowa State,NYJ
+Isaiah Davis,RB,24,2,South Dakota State,NYJ
+Kene Nwangwu,RB,28,5,Iowa State,NYJ
+Khalil Herbert,RB,28,5,Virginia Tech,NYJ
+Andrew Beck,TE,29,7,Texas,NYJ
+Jelani Woods,TE,27,4,Virginia,NYJ
+Jeremy Ruckert,TE,25,4,Ohio State,NYJ
+Mason Taylor,TE,22,1,LSU,NYJ
+Adonai Mitchell,WR,23,2,Texas; Georgia,NYJ
+Arian Smith,WR,24,1,Georgia,NYJ
+Garrett Wilson,WR,25,4,Ohio State,NYJ
+Irvin Charles,WR,29,4,"Indiana PA,  University of; Penn State",NYJ
+Isaiah Williams,WR,25,2,Illinois,NYJ
+Jamaal Pritchett,WR,22,1,South Alabama; Tuskegee University,NYJ
+Josh Reynolds,WR,31,9,Texas A&M; Tyler JC,NYJ
+Mac Dalena,WR,24,0,Fresno State,NYJ
+Quentin Skinner,WR,24,1,Kansas,NYJ
+Andy Dalton,QB,38,15,TCU,PHI
+Cole Payton,QB,23,0,--,PHI
+Jalen Hurts,QB,27,6,Oklahoma; Alabama,PHI
+Tanner McKee,QB,26,3,Stanford,PHI
+Carson Steele,RB,23,2,UCLA; Ball State,PHI
+Dameon Pierce,RB,26,4,Florida,PHI
+Saquon Barkley,RB,29,8,Penn State,PHI
+Tank Bigsby,RB,23,3,Auburn,PHI
+Will Shipley,RB,23,2,Clemson,PHI
+Cameron Latu,TE,26,3,Alabama,PHI
+Dallas Goedert,TE,31,8,South Dakota State,PHI
+E.J. Jenkins,TE,27,3,Georgia Tech; South Carolina; St. Francis PA,PHI
+Grant Calcaterra,TE,27,4,SMU; Oklahoma,PHI
+Johnny Mundt,TE,31,9,Oregon,PHI
+Stone Smartt,TE,27,4,Old Dominion,PHI
+A.J. Brown,WR,28,7,Mississippi,PHI
+Britain Covey,WR,29,4,Utah,PHI
+Danny Gray,WR,27,4,SMU,PHI
+Darius Cooper,WR,24,1,Tarleton State,PHI
+DeVonta Smith,WR,27,5,Alabama,PHI
+Dontayvion Wicks,WR,24,3,Virginia,PHI
+Elijah Moore,WR,26,5,Mississippi,PHI
+Johnny Wilson,WR,25,2,Florida State; Arizona State,PHI
+Marquise Brown,WR,28,7,Oklahoma; College of the Canyons,PHI
+Quez Watkins,WR,27,6,Southern Mississippi,PHI
+Aaron Rodgers,QB,42,21,California; Butte College,PIT
+Mason Rudolph,QB,30,8,Oklahoma State,PIT
+Will Howard,QB,24,1,Ohio State; Kansas State,PIT
+Jaylen Warren,RB,27,4,Oklahoma State,PIT
+Kaleb Johnson,RB,22,1,Iowa,PIT
+Lew Nichols III,RB,24,3,Central Michigan,PIT
+Max Hurleman,RB,24,1,Notre Dame; Colgate,PIT
+Rico Dowdle,RB,27,6,South Carolina,PIT
+Travis Homer,RB,27,7,Miami,PIT
+Darnell Washington,TE,24,3,Georgia,PIT
+Donald Parham,TE,28,7,Stetson,PIT
+JJ Galbreath,TE,24,1,South Dakota,PIT
+Jaheim Bell,TE,24,2,Florida State; South Carolina,PIT
+Jonnu Smith,TE,30,9,Florida International,PIT
+Pat Freiermuth,TE,27,5,Penn State,PIT
+Riley Nowakowski,TE,23,0,--,PIT
+A.T. Perry,WR,26,3,Wake Forest,PIT
+Ben Skowronek,WR,28,5,Notre Dame; Northwestern,PIT
+Brandon Johnson,WR,27,4,UCF; Tennessee,PIT
+Brandon Smith,WR,27,5,Iowa,PIT
+Cole Burgess,WR,26,2,Cortland State Of New York,PIT
+DK Metcalf,WR,28,7,Mississippi,PIT
+Michael Pittman,WR,28,6,USC,PIT
+Roman Wilson,WR,24,2,Michigan,PIT
+Scott Miller,WR,28,7,Bowling Green,PIT
+Drew Lock,QB,29,7,Missouri,SEA
+Jalen Milroe,QB,23,1,Alabama,SEA
+Sam Darnold,QB,28,8,USC,SEA
+Brady Russell,RB,27,3,Colorado,SEA
+Cam Akers,RB,26,6,Florida State,SEA
+Emanuel Wilson,RB,27,3,Fort Valley State College,SEA
+George Holani,RB,26,2,Boise State,SEA
+Jacardia Wright,RB,25,1,Missouri State; Kansas State,SEA
+Kenny McIntosh,RB,26,3,Georgia,SEA
+Robbie Ouzts,RB,23,1,Alabama,SEA
+Zach Charbonnet,RB,25,3,UCLA; Michigan,SEA
+AJ Barner,TE,24,2,Michigan; Indiana,SEA
+Elijah Arroyo,TE,23,1,Miami,SEA
+Eric Saubert,TE,32,9,Drake,SEA
+Harrison Bryant,TE,28,6,Florida Atlantic,SEA
+Lance Mason,TE,22,0,--,SEA
+Nick Kallerup,TE,25,1,Minnesota,SEA
+Cody White,WR,27,6,Michigan State,SEA
+Cooper Kupp,WR,32,9,Eastern Washington,SEA
+Jake Bobo,WR,27,3,UCLA; Duke,SEA
+Jaxon Smith-Njigba,WR,24,3,Ohio State,SEA
+Montorie Foster Jr,WR,24,1,Michigan State,SEA
+Rashid Shaheed,WR,27,4,Weber State,SEA
+Ricky White III,WR,24,1,UNLV; Michigan State,SEA
+Tory Horton,WR,23,1,Colorado State; Nevada,SEA
+Velus Jones Jr.,WR,29,4,Tennessee; USC,SEA
+Adrian Martinez,QB,26,2,Kansas State; Nebraska,SF
+Brock Purdy,QB,26,4,Iowa State,SF
+Kurtis Rourke,QB,25,1,Indiana,SF
+Mac Jones,QB,27,5,Alabama,SF
+Christian McCaffrey,RB,29,9,Stanford,SF
+Isaac Guerendo,RB,25,2,Louisville; Wisconsin,SF
+Jordan James,RB,22,1,Oregon,SF
+Kyle Juszczyk,RB,35,13,Harvard,SF
+Patrick Taylor,RB,28,6,Memphis,SF
+Sincere McCormick,RB,25,4,Texas-San Antonio,SF
+Brayden Willis,TE,26,3,Oklahoma,SF
+George Kittle,TE,32,9,Iowa,SF
+Hayden Rucci,TE,25,2,Wisconsin,SF
+Jake Tonges,TE,26,4,California,SF
+Luke Farrell,TE,28,5,Ohio State,SF
+Christian Kirk,WR,29,8,Texas A&M,SF
+Colton Dowell,WR,27,3,Tennessee-Martin,SF
+De'Zhaun Stribling,WR,23,0,--,SF
+Demarcus Robinson,WR,31,10,Florida,SF
+Jacob Cowing,WR,25,2,Arizona; Texas-El Paso,SF
+Jauan Jennings,WR,28,6,Tennessee,SF
+Jordan Watkins,WR,24,1,Mississippi; Louisville,SF
+Junior Bergen,WR,23,1,Montana,SF
+Malik Turner,WR,30,8,Illinois,SF
+Mike Evans,WR,32,12,Texas A&M,SF
+Ricky Pearsall,WR,25,2,Florida; Arizona State,SF
+Trent Taylor,WR,32,9,Louisiana Tech,SF
+Baker Mayfield,QB,31,8,Oklahoma; Texas Tech,TB
+Connor Bazelak,QB,25,1,Bowling Green; Indiana; Missouri,TB
+Jake Browning,QB,30,7,Washington,TB
+Bucky Irving,RB,23,2,Oregon; Minnesota,TB
+Josh Williams,RB,25,1,LSU,TB
+Kenneth Gainwell,RB,27,5,Memphis,TB
+Michael Wiley,RB,24,2,Arizona,TB
+Owen Wright,RB,27,3,Monmouth; William & Mary,TB
+Sean Tucker,RB,24,3,Syracuse,TB
+Cade Otton,TE,27,4,Washington,TB
+Devin Culp,TE,26,2,Washington,TB
+Ko Kieft,TE,28,4,Minnesota,TB
+Payne Durham,TE,25,3,Purdue,TB
+Chris Godwin Jr.,WR,30,9,Penn State,TB
+David Sills,WR,30,7,West Virginia,TB
+Dennis Houston,WR,27,4,Western Illinois,TB
+Emeka Egbuka,WR,23,1,Ohio State,TB
+Garrett Greene,WR,24,1,West Virginia,TB
+Jalen McMillan,WR,24,2,Washington,TB
+Kameron Johnson,WR,24,2,Barton College,TB
+Noah Short,WR,,0,--,TB
+Sterling Shepard,WR,33,10,Oklahoma,TB
+Tez Johnson,WR,23,1,Oregon; Troy,TB
+Cam Ward,QB,23,1,Miami; Washington State; Incarnate Word,TEN
+Hendon Hooker,QB,28,3,Tennessee; Virginia Tech,TEN
+Mitchell Trubisky,QB,31,9,North Carolina,TEN
+Will Levis,QB,26,3,Kentucky; Penn State,TEN
+Julius Chestnut,RB,25,4,Sacred Heart University,TEN
+Kalel Mullings,RB,23,1,Michigan,TEN
+Michael Carter,RB,27,5,North Carolina,TEN
+Tony Pollard,RB,29,7,Memphis,TEN
+Tyjae Spears,RB,24,3,Tulane,TEN
+Daniel Bellinger,TE,25,4,San Diego State,TEN
+David Martin-Robinson,TE,26,2,Temple,TEN
+Gunnar Helm,TE,23,1,Texas,TEN
+Joel Wilson,TE,25,3,Central Michigan,TEN
+Kylen Granson,TE,28,5,SMU,TEN
+Bryce Oliver,WR,25,2,Youngstown State; Kentucky,TEN
+Calvin Ridley,WR,31,8,Alabama,TEN
+Chimere Dike,WR,24,1,Florida; Wisconsin,TEN
+Courtney Jackson,WR,25,1,Arkansas State,TEN
+Elic Ayomanor,WR,22,1,Stanford,TEN
+James Proche,WR,29,6,SMU,TEN
+K.J. Osborn,WR,28,6,Miami; Buffalo,TEN
+Lance McCutcheon,WR,27,4,Montana State,TEN
+Mason Kinsey,WR,27,6,Berry College,TEN
+Tyren Montgomery,WR,24,0,--,TEN
+Wan'Dale Robinson,WR,25,4,Kentucky,TEN
+Xavier Restrepo,WR,24,1,Miami,TEN
+Jayden Daniels,QB,25,2,LSU; Arizona State,WAS
+Jeff Driskel,QB,33,10,Louisiana Tech; Florida,WAS
+Marcus Mariota,QB,32,11,Oregon,WAS
+Sam Hartman,QB,26,2,Notre Dame; Wake Forest,WAS
+Austin Ekeler,RB,30,9,Western State,WAS
+Chase Edmonds,RB,30,8,Fordham,WAS
+Jacory Croskey-Merritt,RB,25,1,Arizona; New Mexico; Alabama State,WAS
+Jeremy McNichols,RB,30,9,Boise State,WAS
+Jerome Ford,RB,26,4,Cincinnati; Alabama,WAS
+Nick Bellore,RB,37,15,Central Michigan,WAS
+Rachaad White,RB,27,4,Arizona State; Mt. San Antonio; Kearney State,WAS
+Ben Sinnott,TE,23,2,Kansas State,WAS
+Chig Okonkwo,TE,26,4,Maryland,WAS
+Colson Yankoff,TE,26,2,UCLA; Washington,WAS
+John Bates,TE,28,5,Boise State,WAS
+Lawrence Cager,TE,28,6,Georgia; Miami,WAS
+Tyree Jackson,TE,28,5,Buffalo,WAS
+Zach Ertz,TE,35,13,Stanford,WAS
+Chris Hilton Jr.,WR,,0,--,WAS
+Chris Moore,WR,32,10,Cincinnati,WAS
+Deebo Samuel Sr.,WR,30,7,South Carolina,WAS
+Dyami Brown,WR,26,5,North Carolina,WAS
+Ja'Corey Brooks,WR,24,1,Louisville,WAS
+Jacoby Jones,WR,24,1,UCF; Ohio,WAS
+Jaylin Lane,WR,24,1,Virginia Tech; Middle Tennessee State,WAS
+Luke McCaffrey,WR,25,2,Rice; Nebraska,WAS
+Nick Nash,WR,26,1,San Jose State,WAS
+Noah Brown,WR,30,9,Ohio State,WAS
+Terry McLaurin,WR,30,7,Ohio State,WAS
+Treylon Burks,WR,26,4,Arkansas,WAS
+Van Jefferson,WR,29,6,Florida; Mississippi,WAS
