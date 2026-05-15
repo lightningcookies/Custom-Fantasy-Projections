@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projections · Custom Fantasy</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <h1>Custom Fantasy Projections</h1>
+      <p class="sub">Web workbook — replaces per-team sheets + consolidation macros.</p>
+    </header>
+
+    <section class="panel">
+      <h2>Workbook</h2>
+      <div class="row">
+        <button type="button" id="btn-new">New workbook</button>
+        <select id="sel-wb" aria-label="Active workbook"></select>
+        <button type="button" id="btn-reseed" class="ghost">Reset roster rows</button>
+        <button type="button" id="btn-del" class="danger ghost">Delete workbook</button>
+      </div>
+      <p id="wb-msg" class="msg" aria-live="polite"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Team sheet</h2>
+      <div class="row">
+        <label>
+          Team
+          <select id="sel-team"></select>
+        </label>
+        <label class="grow">
+          Filter
+          <input type="search" id="inp-filter" placeholder="Player name…" />
+        </label>
+      </div>
+      <div class="scroll">
+        <table class="grid" id="tbl-sheet">
+          <thead id="tbl-head"></thead>
+          <tbody id="tbl-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Combined boards</h2>
+      <p class="hint">Same idea as Excel Combined_QB / Overall — all teams, one position, sorted by estimated PPR.</p>
+      <div class="row">
+        <button type="button" class="tab" data-pos="QB">QB</button>
+        <button type="button" class="tab" data-pos="RB">RB</button>
+        <button type="button" class="tab" data-pos="WR">WR</button>
+        <button type="button" class="tab" data-pos="TE">TE</button>
+      </div>
+      <div class="scroll">
+        <table class="grid" id="tbl-combined">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Team</th>
+              <th>Player</th>
+              <th>Est PPR</th>
+            </tr>
+          </thead>
+          <tbody id="tbl-combined-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

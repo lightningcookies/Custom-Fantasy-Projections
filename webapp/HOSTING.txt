@@ -1,0 +1,38 @@
+Custom Fantasy Projections — webapp (FastAPI)
+=============================================
+
+Run locally
+-----------
+  cd webapp
+  pip install -r requirements.txt
+  python3 -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+Open http://localhost:8000/
+
+Environment (prefix CFP_)
+--------------------------
+  CFP_REPO_ROOT      Path to repo root (default: parent of webapp/)
+  CFP_ROSTER_CSV     Filename under repo root (default: 2026_rosters.csv)
+  CFP_REFERENCE_CSV  Reference stats CSV (default: players_2024.csv)
+  CFP_DB_PATH        SQLite file (default: webapp/data/projections.db)
+
+Deploy
+------
+  Run behind any ASGI host (gunicorn+uvicorn workers, Docker, Railway, Fly.io,
+  etc.). Serve TLS at the edge. The SQLite file should live on a persistent
+  volume if you want data to survive restarts.
+
+  For production you will likely want: authentication, per-user workbooks,
+  backups of CFP_DB_PATH, and stricter CORS than allow_origins=["*"].
+
+API sketch
+----------
+  GET  /api/health
+  GET  /api/meta
+  GET  /api/workbooks
+  POST /api/workbooks
+  DELETE /api/workbooks/{id}
+  POST /api/workbooks/{id}/reseed
+  GET  /api/workbooks/{id}/team/{abbr}
+  PATCH /api/workbooks/{id}/team/{abbr}/player   JSON: { player_name, position, stats: { p_yd: 4000, ... } }
+  GET  /api/workbooks/{id}/combined/{QB|RB|WR|TE}

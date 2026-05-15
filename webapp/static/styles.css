@@ -1,0 +1,150 @@
+:root {
+  --bg: #0e1218;
+  --panel: #161d27;
+  --border: #2a3545;
+  --text: #e9eef5;
+  --muted: #8b9bb0;
+  --accent: #3dd9a5;
+  --danger: #f87171;
+  --font: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+  padding: 1rem 1.25rem 2.5rem;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.top h1 {
+  font-size: 1.35rem;
+  margin: 0 0 0.25rem;
+}
+.sub {
+  color: var(--muted);
+  margin: 0 0 1.25rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  margin-bottom: 1rem;
+}
+.panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+}
+.row label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.grow {
+  flex: 1 1 200px;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  color: var(--text);
+  background: #1a222e;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.45rem 0.55rem;
+}
+button {
+  cursor: pointer;
+  font-weight: 600;
+}
+button.ghost {
+  background: transparent;
+}
+button.danger {
+  color: var(--danger);
+  border-color: #5c2d2d;
+}
+#btn-new {
+  background: var(--accent);
+  color: #04120d;
+  border: none;
+}
+
+.msg {
+  font-size: 0.85rem;
+  color: var(--muted);
+  min-height: 1.25rem;
+  margin: 0.25rem 0 0;
+}
+.hint {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+
+.scroll {
+  overflow: auto;
+  max-height: min(70vh, 560px);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.grid {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+.grid th,
+.grid td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.35rem 0.45rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.grid th {
+  position: sticky;
+  top: 0;
+  background: #1a222e;
+  color: var(--muted);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.grid td.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.grid input.cell {
+  width: 4.5rem;
+  padding: 0.2rem 0.35rem;
+  font-size: 0.8rem;
+}
+
+.tab {
+  margin-right: 0.25rem;
+}
+
+.ref {
+  color: #6b7d95;
+}
