@@ -1,29 +1,20 @@
-library(tidyverse)
-library(rvest)
-library(openxlsx)
+# Full pipeline: nflreadr rosters + nflfastR player stats + aggregates + workbook.
+# Optional CSV-only refresh (no R): python3 scripts/nflverse_snapshot.py
 library(nflfastR)
+library(readr)
 
-# 1. Generate rosters
-# source("rosters.R")
+source("R/config.R", local = TRUE)
 
-# 2. Generate player stats
-stats <- load_player_stats(seasons = 2023)
-df <- write.csv(stats, file = "player_data.csv")
+# 1. Generate rosters (nflreadr → CSV)
+source("rosters.R")
 
-# 3. Generate Data
+# 2. Player-level stats from nflverse (nflfastR)
+stats <- load_player_stats(seasons = NFL_STATS_SEASON)
+write_csv(stats, "player_data.csv")
+message("Wrote player_data.csv (seasons requested: ", NFL_STATS_SEASON, ")")
+
+# 3. Team / player aggregates for the spreadsheet pipeline
 source("generate_data.R")
 
-# 4. Generate Spreadsheet
+# 4. Generate spreadsheet workbook
 source("spreadsheet_creation.R")
-
-
-
-# Notes for future
-# change names of dataframes to avoid conflicts? 
-
-# Make it year-proof by changing global variable names?
-
-# could write script for when you're done with your projections, you can export your
-# top 200 to csv or something like that.
-
-# integrate formats with underdog or sleeper for comparison?

@@ -1,0 +1,15 @@
+Package: CustomFantasyProjections
+Title: NFL Fantasy Projection Spreadsheet Pipeline
+Version: 0.0.1
+Description: Builds roster and statistics tables from nflverse releases
+    (nflreadr / nflfastR) for the custom projections workbook.
+Imports:
+    dplyr (>= 1.0.0),
+    nflfastR (>= 4.0.0),
+    nflreadr (>= 1.3.0),
+    openxlsx,
+    readr,
+    scales,
+    tibble,
+    tidyverse
+Encoding: UTF-8

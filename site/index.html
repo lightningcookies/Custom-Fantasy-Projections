@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Browse NFL rosters, 2023 fantasy season totals, and team offensive stats — a static companion to Custom Fantasy Projections."
+      content="Browse NFL rosters, prior-season fantasy totals, and team offensive stats — a static companion to Custom Fantasy Projections."
     />
     <title>Custom Fantasy Projections</title>
     <link rel="stylesheet" href="styles.css" />
@@ -23,9 +23,9 @@
         <a href="#home" class="logo" data-nav>Custom Fantasy Projections</a>
         <nav class="nav" aria-label="Primary">
           <a href="#home" data-nav class="nav-link is-active">Home</a>
-          <a href="#rosters" data-nav class="nav-link">2024 rosters</a>
-          <a href="#season" data-nav class="nav-link">2023 players</a>
-          <a href="#teams" data-nav class="nav-link">2023 teams</a>
+          <a href="#rosters" data-nav class="nav-link">2026 rosters</a>
+          <a href="#season" data-nav class="nav-link">2024 players</a>
+          <a href="#teams" data-nav class="nav-link">2024 teams</a>
         </nav>
       </div>
     </header>
@@ -36,31 +36,32 @@
           <p class="eyebrow">NFL · Fantasy football</p>
           <h1 id="home-title">Team-first projections, now in the browser</h1>
           <p class="lede">
-            This site ships prebuilt data from the repository: 2024 depth-chart style rosters, 2023
-            regular-season fantasy totals (from nflfastR-style game logs), and team offensive
-            summaries. There is no server — upload the <code class="inline-code">site</code> folder
+            This site ships prebuilt data from the repository: 2026 roster-style rows, the reference
+            regular-season fantasy totals in <code class="inline-code">player_data.csv</code>
+            (year from <code class="inline-code">R/.effective_stats_season</code>), and matching team
+            offense summaries. There is no server — upload the <code class="inline-code">site</code> folder
             to any static host (Netlify, Cloudflare Pages, GitHub Pages, S3).
           </p>
           <div class="hero-actions">
             <a href="#rosters" class="btn btn-primary" data-nav>Explore rosters</a>
-            <a href="#season" class="btn btn-ghost" data-nav>2023 fantasy leaders</a>
+            <a href="#season" class="btn btn-ghost" data-nav>Reference fantasy leaders</a>
           </div>
           <p class="meta" id="build-meta" aria-live="polite"></p>
         </div>
         <div class="cards">
           <article class="card">
             <h2>Rosters</h2>
-            <p>Filter by franchise and position (QB, RB, WR, TE). Data source: <code class="inline-code">2024_rosters.csv</code>.</p>
+            <p>Filter by franchise and position (QB, RB, WR, TE). Built from <code class="inline-code">2026_rosters.csv</code> (see <code class="inline-code">R/config.R</code>).</p>
             <a href="#rosters" class="card-link" data-nav>Open rosters →</a>
           </article>
           <article class="card">
-            <h2>2023 season totals</h2>
+            <h2>Reference season totals</h2>
             <p>Per-player sums for standard and PPR fantasy points across the regular season.</p>
             <a href="#season" class="card-link" data-nav>View players →</a>
           </article>
           <article class="card">
             <h2>Team offense</h2>
-            <p>Yards, passing efficiency, and scoring drivers aggregated by team from 2023.</p>
+            <p>Yards, passing efficiency, and scoring drivers aggregated by team for the reference season.</p>
             <a href="#teams" class="card-link" data-nav>Team table →</a>
           </article>
         </div>
@@ -68,7 +69,7 @@
 
       <section id="panel-rosters" class="panel" aria-labelledby="rosters-title" hidden>
         <div class="section-head">
-          <h1 id="rosters-title">2024 rosters</h1>
+          <h1 id="rosters-title">2026 rosters</h1>
           <p class="section-desc">Filter and sort the roster export bundled with this project.</p>
         </div>
         <div class="toolbar">
@@ -106,7 +107,7 @@
 
       <section id="panel-season" class="panel" aria-labelledby="season-title" hidden>
         <div class="section-head">
-          <h1 id="season-title">2023 fantasy season totals</h1>
+          <h1 id="season-title">Reference fantasy season totals</h1>
           <p class="section-desc">Regular season only. Fantasy points summed by player from weekly logs.</p>
         </div>
         <div class="toolbar">
@@ -143,8 +144,8 @@
 
       <section id="panel-teams" class="panel" aria-labelledby="teams-title" hidden>
         <div class="section-head">
-          <h1 id="teams-title">2023 team offense</h1>
-          <p class="section-desc">Season aggregates from <code class="inline-code">team_stats_2023.csv</code>.</p>
+          <h1 id="teams-title">Reference team offense</h1>
+          <p class="section-desc">Season aggregates from <code class="inline-code">team_stats_*.csv</code> for the reference year.</p>
         </div>
         <div class="toolbar">
           <label class="field field-grow">

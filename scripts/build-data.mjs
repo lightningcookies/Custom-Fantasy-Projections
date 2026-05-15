@@ -42,6 +42,26 @@ const TEAM_NAMES = {
   WAS: "Washington Commanders",
 };
 
+function readText(rel) {
+  try {
+    return fs.readFileSync(path.join(root, rel), "utf8").trim();
+  } catch {
+    return "";
+  }
+}
+
+function parseConfigSeasons() {
+  const cfg = readText("R/config.R");
+  const tmpl = cfg.match(/NFL_TEMPLATE_SEASON\s*<-\s*(\d+)/);
+  const rosterSeason = tmpl ? Number(tmpl[1]) : 2026;
+  let referenceSeason = Number(readText("R/.effective_stats_season"));
+  if (!Number.isFinite(referenceSeason)) {
+    const fallback = cfg.match(/NFL_STATS_SEASON\s*<-\s*(\d+)/);
+    referenceSeason = fallback ? Number(fallback[1]) : 2024;
+  }
+  return { rosterSeason, referenceSeason };
+}
+
 function readCsv(file) {
   const text = fs.readFileSync(path.join(root, file), "utf8");
   return parse(text, {
@@ -61,12 +81,11 @@ function num(v) {
 function main() {
   fs.mkdirSync(outDir, { recursive: true });
 
-  fs.writeFileSync(
-    path.join(outDir, "meta.json"),
-    JSON.stringify({ teamNames: TEAM_NAMES, builtAt: new Date().toISOString() }, null, 0)
-  );
+  const { rosterSeason, referenceSeason } = parseConfigSeasons();
+  const rosterFile = `${rosterSeason}_rosters.csv`;
+  const teamStatsFile = `team_stats_${referenceSeason}.csv`;
 
-  const rosterRows = readCsv("2024_rosters.csv");
+  const rosterRows = readCsv(rosterFile);
   const rosters = rosterRows.map((r) => ({
     name: r.Name?.trim() ?? "",
     pos: (r.POS ?? "").trim(),
@@ -75,9 +94,8 @@ function main() {
     college: (r.College ?? "").trim(),
     team: (r.team ?? "").trim().toUpperCase(),
   }));
-  fs.writeFileSync(path.join(outDir, "rosters.json"), JSON.stringify(rosters));
 
-  const teamStatRows = readCsv("team_stats_2023.csv");
+  const teamStatRows = readCsv(teamStatsFile);
   const teamStats = teamStatRows.map((r) => ({
     team: (r.team ?? "").toUpperCase(),
     offYd: num(r.off_yd),
@@ -92,13 +110,12 @@ function main() {
     int: num(r.int),
     fmb: num(r.fmb),
   }));
-  fs.writeFileSync(path.join(outDir, "teamStats2023.json"), JSON.stringify(teamStats));
 
   const playerRows = readCsv("player_data.csv");
   const agg = new Map();
 
   for (const row of playerRows) {
-    if (num(row.season) !== 2023) continue;
+    if (num(row.season) !== referenceSeason) continue;
     if ((row.season_type ?? "").trim() !== "REG") continue;
 
     const id = (row.player_id ?? "").trim();
@@ -144,16 +161,28 @@ function main() {
     }
   }
 
-  const season2023 = [...agg.values()].map((p) => ({
+  const seasonTotals = [...agg.values()].map((p) => ({
     ...p,
     fantasy: Math.round(p.fantasy * 100) / 100,
     fantasyPpr: Math.round(p.fantasyPpr * 100) / 100,
   }));
 
-  fs.writeFileSync(path.join(outDir, "season2023.json"), JSON.stringify(season2023));
+  const meta = {
+    teamNames: TEAM_NAMES,
+    builtAt: new Date().toISOString(),
+    rosterSeason,
+    referenceSeason,
+    rosterCsv: rosterFile,
+    teamStatsCsv: teamStatsFile,
+  };
+
+  fs.writeFileSync(path.join(outDir, "meta.json"), JSON.stringify(meta));
+  fs.writeFileSync(path.join(outDir, "rosters.json"), JSON.stringify(rosters));
+  fs.writeFileSync(path.join(outDir, "teamTotals.json"), JSON.stringify(teamStats));
+  fs.writeFileSync(path.join(outDir, "seasonTotals.json"), JSON.stringify(seasonTotals));
 
   console.log(
-    `Wrote ${rosters.length} roster rows, ${teamStats.length} team stat rows, ${season2023.length} player season aggregates → ${outDir}`
+    `Wrote ${rosters.length} roster rows, ${teamStats.length} team stat rows, ${seasonTotals.length} player season aggregates (ref ${referenceSeason}, roster ${rosterSeason}) → ${outDir}`
   );
 }
 

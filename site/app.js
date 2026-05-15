@@ -87,6 +87,14 @@ async function loadJson(path) {
   return res.json();
 }
 
+function rosterYear() {
+  return DATA.meta?.rosterSeason ?? 2026;
+}
+
+function refYear() {
+  return DATA.meta?.referenceSeason ?? 2024;
+}
+
 function setPanel(hash) {
   const id = hash === "#rosters" ? "rosters" : hash === "#season" ? "season" : hash === "#teams" ? "teams" : "home";
   $all(".panel").forEach((p) => {
@@ -101,7 +109,7 @@ function setPanel(hash) {
   document.title =
     id === "home"
       ? "Custom Fantasy Projections"
-      : `${id === "rosters" ? "2024 rosters" : id === "season" ? "2023 players" : "2023 teams"} · Custom Fantasy Projections`;
+      : `${id === "rosters" ? `${rosterYear()} rosters` : id === "season" ? `${refYear()} players` : `${refYear()} teams`} · Custom Fantasy Projections`;
 }
 
 function onNavClick(e) {
@@ -329,7 +337,7 @@ function wireSeason() {
     const q = seasonState.q.trim().toLowerCase();
     if (q) rows = rows.filter((r) => r.name.toLowerCase().includes(q));
     downloadCsv(
-      "season2023_filtered.csv",
+      `season${refYear()}_filtered.csv`,
       rows.map((r) => [
         r.name,
         r.position,
@@ -367,7 +375,7 @@ function wireTeams() {
     const q = teamState.q.trim().toLowerCase();
     if (q) rows = rows.filter((r) => r.searchBlob.toLowerCase().includes(q));
     downloadCsv(
-      "team_stats_2023_filtered.csv",
+      `team_stats_${refYear()}_filtered.csv`,
       rows.map((r) => [
         r.label,
         Math.round(r.offYd),
@@ -399,8 +407,8 @@ async function boot() {
     const [meta, rosters, season, teamStats] = await Promise.all([
       loadJson("data/meta.json"),
       loadJson("data/rosters.json"),
-      loadJson("data/season2023.json"),
-      loadJson("data/teamStats2023.json"),
+      loadJson("data/seasonTotals.json"),
+      loadJson("data/teamTotals.json"),
     ]);
     DATA.meta = meta;
     DATA.rosters = rosters;

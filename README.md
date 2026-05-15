@@ -1,38 +1,82 @@
-# Custom-Fantasy-Projections
-This repository was built using R to create a template spreadsheet allowing you to go team by team projecting fantasy output just like the professionals! This aims to be helpful in your own fantasy football/best ball leagues! It's easy to get caught up on players you like, but are your projections in line with where you would draft him? Don't worry about all the nitty-gritty R scripts and macros, I have made it all neat inside one spreadsheet file. If you are interested, feel free to dive deep and see how I created this template!
-## Current Features:
-1. 2023 Fantasy football stats and results for reference.
-2. 2024 Team rosters for QB, RB, WR, and TE positions.
-3. Compare this year's to last year's statistics team by team.
-4. Input your custom scoring format for your league.
-5. Get overall rankings for individual positions and overall.
+# Custom Fantasy Projections
 
-## Instructions for download and use:
-1. Download From -> [custom_projections_2024V1](https://github.com/lightningcookies/Custom-Fantasy-Projections/blob/main/custom_projections_2024V1.xlsm) by clicking "download raw file", or by pressing ctrl + shift + s
-3. Open with Microsoft Excel. In the top bar, click Editing. A security-risk pop-up should appear. Macros have to be enabled to get positional rankings and overall rankings. Never allow macros in a file from someone you don't trust, although I hope that you can trust me & trust the fact that anyone can check the macros (because it's open source).
-- If you feel comfortable enabling macros, here is how you do it:
-- In most cases, you can unblock macros by modifying the properties of the file as follows:
-- Open Windows File Explorer and go to the folder where you saved the file.
-- Right-click the file and choose Properties from the context menu.
-- At the bottom of the General tab, select the Unblock checkbox and select OK.
-4. Fill out team-by-team projections. I suggest referencing betting markets & other fantasy projections. For example, [DK sportsbook's player stats odds](https://sportsbook.draftkings.com/leagues/football/nfl?category=player-stats) or [FantasyPro's Fantasy Football projections](https://www.fantasypros.com/nfl/projections/rb.php?week=draft) should both give you a good idea about players.
-5. head to the home page, and press the "Refresh button" that will execute macros. These will 3 macros will...
-- Create/update a sheet called "Overall" by combining every player's projection.
-- Create/update a combined list for QB, RB, WR, and TE and put them in separate sheets.
-- Apply table style again in case it gets screwed up and looks messy. 
+R-based pipeline that builds a **team-by-team Excel workbook** for NFL fantasy projections. The 2026 offseason refresh targets the **2026 NFL season** (fall 2026–early 2027) using **nflverse** libraries instead of scraping ESPN HTML.
 
-### Extra
-This was my 2023 summer hobby project! I revisited it quickly for 2024. I didn't make any major improvements this year. I hope to make more improvements for 2025! If you like what you see, please give it a star :) I just graduated with a BS in statistics: data science at BYU. I hope that I can present this project to potential employers as proof of my skills :) 
+## What you get
 
-Any suggestions are more than welcome! I'm new to GitHub and open-sourcing so please be patient. I especially would love any help with VBA and automating the spreadsheet better.
+1. **Reference player totals** from `nflfastR::load_player_stats()` (regular season) for the season configured in `R/config.R` (defaults to **2025**; if that release is not in your `player_data.csv` yet, `generate_data.R` falls back to the newest season present and records it in `R/.effective_stats_season`).
+2. **Current-season rosters** (QB, RB, WR, TE) from **`nflreadr::load_rosters()`** — the same nflverse release files as the website, not `rvest`.
+3. **Team offensive rollups** derived from those player totals.
+4. **`custom_projections_2026V1.xlsx`**: one sheet per franchise with last year’s stats, a blank “at a glance” block for your **2026–27** projections, and roster rows zeroed for you to fill in.
 
-## Working on for next year:
-1. more spreadsheet automation
-2. adding more advanced stats
-3. adding more graphs and historical context
-4. learn more about macros and not rely on LLM's. 
+## R pipeline (recommended)
 
+Install dependencies (once):
 
-## Web dashboard
+```r
+install.packages(c("tidyverse", "nflreadr", "nflfastR", "openxlsx", "readr", "scales"))
+```
 
-The `site/` folder is a static dashboard (rosters, 2023 fantasy totals, team offense). Build data with `npm install && npm run build`, preview with `npm run serve`. Publish the `site` directory to any static host; see `site/HOSTING.txt`.
+From the project root:
+
+```r
+source("main.R")
+```
+
+That runs, in order: `rosters.R` → `load_player_stats` → `generate_data.R` → `spreadsheet_creation.R`.
+
+Seasons and filenames are controlled in **`R/config.R`** (`NFL_TEMPLATE_SEASON`, `NFL_ROSTER_SEASON`, `NFL_STATS_SEASON`).
+
+## Refresh CSVs without R (optional)
+
+If you only have Python 3, you can pull the same nflverse **static release** CSVs and rebuild `player_data.csv`, `2026_rosters.csv`, `players_*.csv`, and `team_stats_*.csv`:
+
+```bash
+python3 scripts/nflverse_snapshot.py
+```
+
+To prefer a specific stats year when GitHub has it (e.g. after the Super Bowl):
+
+```bash
+NFLVERSE_STATS_SEASON=2025 python3 scripts/nflverse_snapshot.py
+```
+
+## Excel template and macros
+
+1. Download **`custom_projections_2026V1.xlsx`** from this repo (when you have generated it locally, or once it is attached to a release).
+2. Open in Microsoft Excel. Enable macros only if you trust the workbook; the VBA under `VBA macros/` automates consolidation and styling.
+3. Fill in projections team by team, then run your **Refresh** workflow as described in the original template instructions.
+
+Useful references while projecting: [DraftKings player props](https://sportsbook.draftkings.com/leagues/football/nfl?category=player-stats) and [FantasyPros projections](https://www.fantasypros.com/nfl/projections/rb.php?week=draft).
+
+## Web app (Excel replacement, MVP)
+
+The **`webapp/`** folder is a **FastAPI + SQLite** service plus a small static UI:
+
+- Editable projection cells per team (same stat columns as `players_*.csv`), saved to SQLite with debounced PATCH requests.
+- **Combined QB/RB/WR/TE** board across all teams (replaces the “Combined\_\*” / “Overall” macro consolidation), sorted by a simple estimated PPR.
+- **Reference** columns join best-effort from the bundled reference CSV when names match.
+
+Run locally:
+
+```bash
+cd webapp
+pip install -r requirements.txt
+python3 -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+Open `http://localhost:8000/`, create a **New workbook**, pick a team, edit cells. Configuration uses env prefix **`CFP_`** (see `webapp/app/main.py`): `CFP_REPO_ROOT`, `CFP_ROSTER_CSV`, `CFP_REFERENCE_CSV`, `CFP_DB_PATH`.
+
+Details: `webapp/HOSTING.txt`.
+
+## Static reference dashboard (`site/`)
+
+The **`site/`** folder is a **static** read-only dashboard (rosters, prior-season fantasy totals, team offense tables from bundled JSON — no projection editing). Build data with `npm install && npm run build`, preview with `npm run serve`. Publish the **`site`** directory to any static host; see **`site/HOSTING.txt`**.
+
+## R package metadata
+
+A minimal **`DESCRIPTION`** lists Imports for `devtools::install_deps()` or `renv` workflows.
+
+---
+
+This started as a 2023 hobby project; the data layer is now aligned with **nflreadr / nflfastR** for reproducibility and easier updates each offseason.
