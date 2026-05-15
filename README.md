@@ -1,5 +1,7 @@
 # Custom Fantasy Projections
 
+**Full setup, deploy, and self-hosting:** see **[docs/SETUP.md](docs/SETUP.md)**.
+
 R-based pipeline that builds a **team-by-team Excel workbook** for NFL fantasy projections. The 2026 offseason refresh targets the **2026 NFL season** (fall 2026–early 2027) using **nflverse** libraries instead of scraping ESPN HTML.
 
 ## What you get
